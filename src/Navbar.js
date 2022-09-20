@@ -14,6 +14,10 @@ const navlinks = [
         linkto: '/extras/assets'
     },
     {
+        linktitle: 'Information',
+        linkto: '/information/dbfunctions'
+    },
+    {
         linktitle: 'Cards',
         linkto: '/cards'
     },
@@ -28,7 +32,7 @@ export default function Navigation() {
                     Object.entries(navlinks).map(([sat], i) => (
                         <Navbar.Link aria-label="Close" onClick={() => {
                             navigate(navlinks[sat].linkto)
-                        }}>{navlinks[sat].linktitle}</Navbar.Link>
+                        }} key={sat.toString()}>{navlinks[sat].linktitle}</Navbar.Link>
                     ))
                 }
             </Navbar.Content>

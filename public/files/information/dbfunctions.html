@@ -1,0 +1,1288 @@
+<style>
+
+    table {
+        border: 1px solid rgb(51, 51, 51);
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+    }
+
+    thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    th,
+    td {
+        border: 1px solid rgb(51, 51, 51);
+        padding: 12px 15px;
+    }
+
+    tbody tr {
+        border-bottom: 1px solid rgb(51, 51, 51);
+    }
+
+    th:first-of-type {
+        border-top-left-radius: 10px;
+    }
+
+    th:last-of-type {
+        border-top-right-radius: 10px;
+    }
+
+    tr:last-of-type td:first-of-type {
+        border-bottom-left-radius: 10px;
+    }
+
+    tr:last-of-type td:last-of-type {
+        border-bottom-right-radius: 10px;
+    }
+</style>
+<h2 id="database-function-tables">Database Function Tables</h2>
+<h4 id="causality-types">Causality Types</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Causality ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>cau_val1</th>
+            <th>cau_val2</th>
+            <th>cau_val3</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">0</td>
+            <td>isNoneRule</td>
+            <td>Nothing</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td>isOverHpRate</td>
+            <td>HP is above percent</td>
+            <td>HP Percent</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>isUnderHpRate</td>
+            <td>HP is below percent</td>
+            <td>HP Percent</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td>isOverEnergy</td>
+            <td>Ki is above a number</td>
+            <td>Ki Amount</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td>isUnderEnergy</td>
+            <td>Ki is below a number</td>
+            <td>Ki Amount</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td>isElapsedTurn</td>
+            <td>Battle has past turn number</td>
+            <td>Turn</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">6</td>
+            <td>isPartyRaceType</td>
+            <td>Checks if entire deck has a certain link skill</td>
+            <td>Link Skill ID</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">7</td>
+            <td>isEnemyRaceType</td>
+            <td>Checks if enemy has certain link skill</td>
+            <td>Link Skill ID</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">8</td>
+            <td>isOverFightingPower</td>
+            <td>Checks current attack and defense is over a number</td>
+            <td>Attack</td>
+            <td>Defense</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">9</td>
+            <td>isUnderFightingPower</td>
+            <td>Checks current attack and defense is under a number</td>
+            <td>Attack</td>
+            <td>Defense</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">10</td>
+            <td>isOverHpRateOverEnergy</td>
+            <td>HP is above percent, Ki is above number</td>
+            <td>HP Percent</td>
+            <td>Ki Amount</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">11</td>
+            <td>isOverHpRateUnderEnergy</td>
+            <td>HP is above percent, Ki is below number</td>
+            <td>HP Percent</td>
+            <td>Ki Amount</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">12</td>
+            <td>isUnderHpRateOverEnergy</td>
+            <td>HP is below percent, Ki is above number</td>
+            <td>HP Percent</td>
+            <td>Ki Amount</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">13</td>
+            <td>isUnderHpRateUnderEnergy</td>
+            <td>HP is below percent, Ki is below number</td>
+            <td>HP Percent</td>
+            <td>Ki Amount</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">14</td>
+            <td>isFirstAttack</td>
+            <td>Card is in first slot</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">15</td>
+            <td>isOverTargetNum</td>
+            <td>More than a number of enemies</td>
+            <td>Number of Enemies</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">16</td>
+            <td>isUnderTargetNum</td>
+            <td>Less than a number of enemies</td>
+            <td>Number of Enemies</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">17</td>
+            <td>isOverTargetHpRate</td>
+            <td>Enemy target HP above a percent</td>
+            <td>HP Percent</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">18</td>
+            <td>isUnderTargetHpRate</td>
+            <td>Enemy target HP below a percent</td>
+            <td>HP Percent</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">19</td>
+            <td>isAttackOrder</td>
+            <td>Checks card slot position</td>
+            <td>Slot (0, 1, 2)</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">20</td>
+            <td>isOverEnergyCondition</td>
+            <td>Ki is above percent</td>
+            <td>Ki Percent</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">21</td>
+            <td>isUnderEnergyCondition</td>
+            <td>Ki is below percent</td>
+            <td>Ki Percent</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">22</td>
+            <td>isPartyExistChara</td>
+            <td>Check if character is present in deck</td>
+            <td>Card Unique Info ID</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">23</td>
+            <td>isLinkNum</td>
+            <td>Check if at number of links or greater are active</td>
+            <td>Number of links</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">24</td>
+            <td>isHitDamaged</td>
+            <td>Activates upon being attacked</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">25</td>
+            <td>isTargetKill</td>
+            <td>Activates when target is killed</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">26</td>
+            <td>isOverHpRateEnableSpecial</td>
+            <td>HP is above percent, card has enough ki to super</td>
+            <td>HP Percent</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">27</td>
+            <td>isUnderHpRateEnableSpecial</td>
+            <td>HP is below percent, card has enough ki to super</td>
+            <td>HP Percent</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">28</td>
+            <td>isSlotElementType</td>
+            <td>Checks if any cards on rotation are a certain element</td>
+            <td>Element Type</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">29</td>
+            <td>isEnemyExistChara</td>
+            <td>Check if character is an enemy</td>
+            <td>Card Unique Info ID</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">30</td>
+            <td>isGuardSuccess</td>
+            <td>Check if card is guarding</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">31</td>
+            <td>isCombinationAttack</td>
+            <td>Activates if there are three enemy attacks</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">32</td>
+            <td>isChangeEnergyBallColor</td>
+            <td>Checks if there is a ki of a certain type on the board</td>
+            <td>Ki Type</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">33</td>
+            <td>isBetweenHpRate</td>
+            <td>Checks if card HP percent is between two numbers</td>
+            <td>HP Percent Lower</td>
+            <td>HP Percent Higher</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">34</td>
+            <td>isOverTeamCategoryNum</td>
+            <td>Check if category card is present</td>
+            <td>0 for deck; 1 for enemy</td>
+            <td>Category ID</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">35</td>
+            <td>hasAllElementBitpatternCards</td>
+            <td>Checks if deck has all types of an element bitset</td>
+            <td>Element Bitset</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">36</td>
+            <td>isOverHpRateAndElapsedTurn</td>
+            <td>HP is above percent, battle has past turn number</td>
+            <td>HP Percent</td>
+            <td>Turn</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">37</td>
+            <td>isUnderHpRateAndElapsedTurn</td>
+            <td>HP is below percent, battle has past turn number</td>
+            <td>HP Percent</td>
+            <td>Turn</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">38</td>
+            <td>isTargetEnemyCondition</td>
+            <td>Enemy has required status effects</td>
+            <td>Status Effect Flags (see footnote)</td>
+            <td>Unknown</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">39</td>
+            <td>isTargetElementTypeBitPattern</td>
+            <td>Check if enemy element matches element bitset</td>
+            <td>Element Bitset</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">40</td>
+            <td>isSpecialAttack</td>
+            <td>Activates if card has used a special attack</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">41</td>
+            <td>isOverTeamUniqueCardNum</td>
+            <td>Activates if deck has card with name</td>
+            <td>Unknown</td>
+            <td>Card Unique Info ID</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">42</td>
+            <td>isEnergyBallGetNum</td>
+            <td>Activates if card gets more then specified Ki amount</td>
+            <td>Unknown</td>
+            <td>Ki Amount</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">43</td>
+            <td>isDodgeSuccess</td>
+            <td>Activates if card has evaded an attack</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">44</td>
+            <td>isCountUp</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">45</td>
+            <td>isContainsCardByCategoryAndUniqueInfo</td>
+            <td>Activates if card is in target, category and unique info relations</td>
+            <td>Target (team, turn, enemy...)</td>
+            <td>Category (id, not sub target)</td>
+            <td>card_unique_info_set_relations</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+
+<h5 id="causality-38---istargetenemycondition-status-flags">Causality #38 - isTargetEnemyCondition Status Flags</h5>
+<table>
+    <thead>
+        <tr>
+            <th align="center">Status Mask</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">1</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">8</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">16</td>
+            <td>ATK Down</td>
+        </tr>
+        <tr>
+            <td align="center">32</td>
+            <td>DEF Down</td>
+        </tr>
+        <tr>
+            <td align="center">64</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">128</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">256</td>
+            <td>Efficacy Type 9</td>
+        </tr>
+        <tr>
+            <td align="center">512</td>
+            <td>Efficacy Type 47</td>
+        </tr>
+        <tr>
+            <td align="center">1024</td>
+            <td>Sealed (Efficacy Type 48)</td>
+        </tr>
+        <tr>
+            <td align="center">2048</td>
+            <td>Efficacy Type 8</td>
+        </tr>
+        <tr>
+            <td align="center">4096</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">8192</td>
+            <td>Efficacy Type 53</td>
+        </tr>
+        <tr>
+            <td align="center">16384</td>
+            <td>Efficacy Type 75</td>
+        </tr>
+        <tr>
+            <td align="center">32768</td>
+            <td>Efficacy Type 94</td>
+        </tr>
+        <tr>
+            <td align="center">65536</td>
+            <td>Efficacy Type 96</td>
+        </tr>
+        <tr>
+            <td align="center">131072</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">262144</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">524288</td>
+            <td>Efficacy Type 100</td>
+        </tr>
+        <tr>
+            <td align="center">1048576</td>
+            <td>Efficacy Type 101</td>
+        </tr>
+    </tbody>
+</table>
+<p><br /><br /></p>
+<h4 id="calc-options">Calc Options</h4>
+<table>
+    <thead>
+        <tr>
+            <th align="center">Calc Option</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">0</td>
+            <td>Calc Plus</td>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td>Calc Minus</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>Calc Percent Plus</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td>Calc Percent Minus</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td>Calc Equal</td>
+        </tr>
+    </tbody>
+</table>
+<p><br /><br /></p>
+<h4 id="efficacy-types">Efficacy Types</h4>
+<table>
+    <thead>
+        <tr>
+            <th align="right">Efficacy Type</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="right">1</td>
+            <td>Change Atk Param</td>
+        </tr>
+        <tr>
+            <td align="right">2</td>
+            <td>Change Def Param</td>
+        </tr>
+        <tr>
+            <td align="right">3</td>
+            <td>Change Atk Def Param</td>
+        </tr>
+        <tr>
+            <td align="right">4</td>
+            <td>Change Heal Hp</td>
+        </tr>
+        <tr>
+            <td align="right">5</td>
+            <td>Change Enegy Param</td>
+        </tr>
+        <tr>
+            <td align="right">8</td>
+            <td>Change Condition Delay</td>
+        </tr>
+        <tr>
+            <td align="right">9</td>
+            <td>Change Condition Stun</td>
+        </tr>
+        <tr>
+            <td align="right">11</td>
+            <td>Change Attack Order</td>
+        </tr>
+        <tr>
+            <td align="right">12</td>
+            <td>Change Pain Attack</td>
+        </tr>
+        <tr>
+            <td align="right">13</td>
+            <td>Change Resist Damage</td>
+        </tr>
+        <tr>
+            <td align="right">16</td>
+            <td>Change Element Type Atk</td>
+        </tr>
+        <tr>
+            <td align="right">17</td>
+            <td>Change Element Type Def</td>
+        </tr>
+        <tr>
+            <td align="right">18</td>
+            <td>Change Element Type Atk Def</td>
+        </tr>
+        <tr>
+            <td align="right">19</td>
+            <td>Change Element Type Hp Param</td>
+        </tr>
+        <tr>
+            <td align="right">20</td>
+            <td>Change Element Type Enegy Param</td>
+        </tr>
+        <tr>
+            <td align="right">21</td>
+            <td>Change Recovery</td>
+        </tr>
+        <tr>
+            <td align="right">22</td>
+            <td>Change Condition Heal</td>
+        </tr>
+        <tr>
+            <td align="right">24</td>
+            <td>Change Guard Break</td>
+        </tr>
+        <tr>
+            <td align="right">26</td>
+            <td>Change Absorb Special Energy</td>
+        </tr>
+        <tr>
+            <td align="right">27</td>
+            <td>Change Resist Special Damage</td>
+        </tr>
+        <tr>
+            <td align="right">28</td>
+            <td>Change Absorb Deal Damage</td>
+        </tr>
+        <tr>
+            <td align="right">34</td>
+            <td>Change Dokkan Gauge Bonus</td>
+        </tr>
+        <tr>
+            <td align="right">35</td>
+            <td>Change Heal Bonus</td>
+        </tr>
+        <tr>
+            <td align="right">36</td>
+            <td>Change Special Bonus</td>
+        </tr>
+        <tr>
+            <td align="right">37</td>
+            <td>Change Energy Bonus</td>
+        </tr>
+        <tr>
+            <td align="right">38</td>
+            <td>Change Linkage Bonus</td>
+        </tr>
+        <tr>
+            <td align="right">39</td>
+            <td>Change Element Type Energy Bonus</td>
+        </tr>
+        <tr>
+            <td align="right">40</td>
+            <td>Change Element Type Linkage Bonus</td>
+        </tr>
+        <tr>
+            <td align="right">43</td>
+            <td>Change Hp Atk</td>
+        </tr>
+        <tr>
+            <td align="right">44</td>
+            <td>Change Element Type Hp Atk</td>
+        </tr>
+        <tr>
+            <td align="right">46</td>
+            <td>Change Passive Probability Bonus</td>
+        </tr>
+        <tr>
+            <td align="right">47</td>
+            <td>Change Condition Psychic</td>
+        </tr>
+        <tr>
+            <td align="right">48</td>
+            <td>Change Condition Astute</td>
+        </tr>
+        <tr>
+            <td align="right">50</td>
+            <td>Change Invalid Bad Condi</td>
+        </tr>
+        <tr>
+            <td align="right">51</td>
+            <td>Change Energy Ball Color</td>
+        </tr>
+        <tr>
+            <td align="right">52</td>
+            <td>Change Resurrection</td>
+        </tr>
+        <tr>
+            <td align="right">53</td>
+            <td>Change Condition Chance Time</td>
+        </tr>
+        <tr>
+            <td align="right">54</td>
+            <td>Change Invalid Combination Attack Bonus</td>
+        </tr>
+        <tr>
+            <td align="right">55</td>
+            <td>Change Target Def And Self Atk</td>
+        </tr>
+        <tr>
+            <td align="right">56</td>
+            <td>Change Target Def And Self Def</td>
+        </tr>
+        <tr>
+            <td align="right">57</td>
+            <td>Change Target Def And Self Energy</td>
+        </tr>
+        <tr>
+            <td align="right">58</td>
+            <td>Change Energy Ball Heal</td>
+        </tr>
+        <tr>
+            <td align="right">59</td>
+            <td>Change Energy Ball Proportional Atk</td>
+        </tr>
+        <tr>
+            <td align="right">60</td>
+            <td>Change Energy Ball Proportional Def</td>
+        </tr>
+        <tr>
+            <td align="right">61</td>
+            <td>Change Energy Ball Proportional Atk Def</td>
+        </tr>
+        <tr>
+            <td align="right">64</td>
+            <td>Change Element Type Energy Ball Proportional Atk</td>
+        </tr>
+        <tr>
+            <td align="right">65</td>
+            <td>Change Element Type Energy Ball Proportional Def</td>
+        </tr>
+        <tr>
+            <td align="right">66</td>
+            <td>Change Element Type Energy Ball Proportional Atk Def</td>
+        </tr>
+        <tr>
+            <td align="right">67</td>
+            <td>Change Energy Ball Color Bitpattern</td>
+        </tr>
+        <tr>
+            <td align="right">68</td>
+            <td>Change Energy Ball Proportional Bitpattern</td>
+        </tr>
+        <tr>
+            <td align="right">69</td>
+            <td>Change Energy Ball Color Specify Random</td>
+        </tr>
+        <tr>
+            <td align="right">70</td>
+            <td>Change Energy Ball Color Specify Random Without Obstacles</td>
+        </tr>
+        <tr>
+            <td align="right">71</td>
+            <td>Change Hp Range Atk</td>
+        </tr>
+        <tr>
+            <td align="right">72</td>
+            <td>Change Hp Range Def</td>
+        </tr>
+        <tr>
+            <td align="right">73</td>
+            <td>Change Hp Range Atk Def</td>
+        </tr>
+        <tr>
+            <td align="right">74</td>
+            <td>Change Hp Range Ball Heal</td>
+        </tr>
+        <tr>
+            <td align="right">75</td>
+            <td>Change Condition Disable Swap</td>
+        </tr>
+        <tr>
+            <td align="right">76</td>
+            <td>Change Condition Advantageous Atk Element</td>
+        </tr>
+        <tr>
+            <td align="right">77</td>
+            <td>Change Reset Ball Color</td>
+        </tr>
+        <tr>
+            <td align="right">78</td>
+            <td>Change Condition Advantageous Def Element</td>
+        </tr>
+        <tr>
+            <td align="right">80</td>
+            <td>Change Counter Attack</td>
+        </tr>
+        <tr>
+            <td align="right">81</td>
+            <td>Change Extra Attack</td>
+        </tr>
+        <tr>
+            <td align="right">82</td>
+            <td>Change Element Type Hp Atk Def</td>
+        </tr>
+        <tr>
+            <td align="right">83</td>
+            <td>Change Element Type Energy Bitpattern</td>
+        </tr>
+        <tr>
+            <td align="right">84</td>
+            <td>Change Suicide Attack</td>
+        </tr>
+        <tr>
+            <td align="right">85</td>
+            <td>Change Step Extra Attack</td>
+        </tr>
+        <tr>
+            <td align="right">86</td>
+            <td>Change Special Atk Rate</td>
+        </tr>
+        <tr>
+            <td align="right">87</td>
+            <td>Change Element Type Attack Coef</td>
+        </tr>
+        <tr>
+            <td align="right">88</td>
+            <td>Change Element Type Defense Coef</td>
+        </tr>
+        <tr>
+            <td align="right">89</td>
+            <td>Change Element Type Attack Defense Coef</td>
+        </tr>
+        <tr>
+            <td align="right">90</td>
+            <td>Change Critical Attack</td>
+        </tr>
+        <tr>
+            <td align="right">91</td>
+            <td>Change Dodge</td>
+        </tr>
+        <tr>
+            <td align="right">92</td>
+            <td>Change Always Hit</td>
+        </tr>
+        <tr>
+            <td align="right">93</td>
+            <td>Change Element Type Bitpattern Hp</td>
+        </tr>
+        <tr>
+            <td align="right">94</td>
+            <td>Change Invalidate Stun</td>
+        </tr>
+        <tr>
+            <td align="right">95</td>
+            <td>Change Dodge Counter Attack</td>
+        </tr>
+        <tr>
+            <td align="right">96</td>
+            <td>Change Energy Ball Additional Point</td>
+        </tr>
+        <tr>
+            <td align="right">97</td>
+            <td>Change Absorb Special</td>
+        </tr>
+        <tr>
+            <td align="right">98</td>
+            <td>Change Incremental Param</td>
+        </tr>
+        <tr>
+            <td align="right">99</td>
+            <td>Change Invalidate Status Down</td>
+        </tr>
+        <tr>
+            <td align="right">100</td>
+            <td>Change Invalidate Astute</td>
+        </tr>
+        <tr>
+            <td align="right">101</td>
+            <td>Change Prediction</td>
+        </tr>
+        <tr>
+            <td align="right">102</td>
+            <td>Change Metamorphic Probability Count Limit</td>
+        </tr>
+        <tr>
+            <td align="right">104</td>
+            <td>Change H P Atk Def</td>
+        </tr>
+        <tr>
+            <td align="right">105</td>
+            <td>Replace Energy Ball</td>
+        </tr>
+        <tr>
+            <td align="right">106</td>
+            <td>Potential Heal</td>
+        </tr>
+        <tr>
+            <td align="right">107</td>
+            <td>Change Condition Stackable Delay</td>
+        </tr>
+    </tbody>
+</table>
+<p><br /><br /></p>
+<h4 id="target-types">Target Types</h4>
+<table>
+    <thead>
+        <tr>
+            <th align="center">Target Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td>Self</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>Party All</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td>Enemy</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td>Enemy All</td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td>Self And Target</td>
+        </tr>
+        <tr>
+            <td align="center">6</td>
+            <td>Party Race Type</td>
+        </tr>
+        <tr>
+            <td align="center">7</td>
+            <td>Party Exist Chara</td>
+        </tr>
+        <tr>
+            <td align="center">8</td>
+            <td>Target Excepct</td>
+        </tr>
+        <tr>
+            <td align="center">9</td>
+            <td>Target Party Enemy Attack Order</td>
+        </tr>
+        <tr>
+            <td align="center">10</td>
+            <td>Slot Attacker</td>
+        </tr>
+        <tr>
+            <td align="center">11</td>
+            <td>Party Slot Random</td>
+        </tr>
+        <tr>
+            <td align="center">12</td>
+            <td>Party Super Class</td>
+        </tr>
+        <tr>
+            <td align="center">13</td>
+            <td>Party Extreme Class</td>
+        </tr>
+        <tr>
+            <td align="center">14</td>
+            <td>Enemy Super Class</td>
+        </tr>
+        <tr>
+            <td align="center">15</td>
+            <td>Enemy Extreme Class</td>
+        </tr>
+    </tbody>
+</table>
+<p><br /><br /></p>
+<h4 id="influence-types">Influence Types</h4>
+<table>
+    <thead>
+        <tr>
+            <th align="center">Influence Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td>Both Ends</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>Left</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td>Right</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td>Jump Left</td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td>Jump Right</td>
+        </tr>
+    </tbody>
+</table>
+<p><br /><br /></p>
+<h4 id="exec-timing">Exec Timing</h4>
+<table>
+    <thead>
+        <tr>
+            <th align="center">Exec Timing</th>
+            <th>Description</th>
+            <th>ef</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">1</td>
+            <td>Start Round</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>Link Skills</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td>Your Turn</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td>On Player Attack</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td>Enemy Turn</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">6</td>
+            <td>Before Player Hit</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">7</td>
+            <td>After Player Hit</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">8</td>
+            <td>Battle Result Phase</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">9</td>
+            <td>End Round</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">10</td>
+            <td>Unknown</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td align="center">11</td>
+            <td>End of Puzzle Phase</td>
+            <td>ef</td>
+        </tr>
+    </tbody>
+</table>
+<p><br /><br /></p>
+<h4 id="type-bitsets">Type Bitsets</h4>
+<table>
+    <thead>
+        <tr>
+            <th align="center">Type</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">AGL</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td align="center">TEQ</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td align="center">INT</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td align="center">STR</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td align="center">PHY</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td align="center">Super</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td align="center">Extreme</td>
+            <td>64</td>
+        </tr>
+        <tr>
+            <td align="center">Unknown</td>
+            <td>128</td>
+        </tr>
+        <tr>
+            <td align="center">Unknown</td>
+            <td>256</td>
+        </tr>
+        <tr>
+            <td align="center">Unknown</td>
+            <td>512</td>
+        </tr>
+        <tr>
+            <td align="center">Unknown</td>
+            <td>1024</td>
+        </tr>
+        <tr>
+            <td align="center">Unknown</td>
+            <td>2048</td>
+        </tr>
+        <tr>
+            <td align="center">Super AGL</td>
+            <td>4096</td>
+        </tr>
+        <tr>
+            <td align="center">Super TEQ</td>
+            <td>8192</td>
+        </tr>
+        <tr>
+            <td align="center">Super INT</td>
+            <td>16384</td>
+        </tr>
+        <tr>
+            <td align="center">Super STR</td>
+            <td>32768</td>
+        </tr>
+        <tr>
+            <td align="center">Super PHY</td>
+            <td>65536</td>
+        </tr>
+        <tr>
+            <td align="center">Extreme AGL</td>
+            <td>131072</td>
+        </tr>
+        <tr>
+            <td align="center">Extreme TEQ</td>
+            <td>262144</td>
+        </tr>
+        <tr>
+            <td align="center">Extreme INT</td>
+            <td>524288</td>
+        </tr>
+        <tr>
+            <td align="center">Extreme STR</td>
+            <td>1048576</td>
+        </tr>
+        <tr>
+            <td align="center">Extreme PHY</td>
+            <td>2097512</td>
+        </tr>
+        <tr>
+            <td align="center">Unknown</td>
+            <td>4194304</td>
+        </tr>
+        <tr>
+            <td align="center">Unknown</td>
+            <td>8388608</td>
+        </tr>
+        <tr>
+            <td align="center">Unknown</td>
+            <td>16777216</td>
+        </tr>
+    </tbody>
+</table>
+<p><br /><br /></p>
+<h4 id="effect-pack-category">Effect Pack Category</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Effect Pack Category</th>
+            <th>Animation Path</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>comic_text/ja/%s/%s.lwf</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>ingame/battle/effect/%s/%s.lwf</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>ingame/sugoroku/effect/%s/%s.lwf</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>outgame/effect/%s/%s.lwf</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>ingame/battle/sp_effect/%s/%s/%s.lwf</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>ingame/battle/sp_effect/%s/%s.lwf</td>
+        </tr>
+    </tbody>
+</table>
+<p><br /> <br /></p>
+<h4 id="link-check-types">Link Check Types</h4>
+<table>
+    <thead>
+        <tr>
+            <th align="center">Link Check Type</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">0</td>
+            <td>isLinkCheckType</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td>isLinkCheckSlotChara</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>isLinkCheckUnderHprate</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td>isLinkCheckExistChara</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td>isLinkCheckPercentage</td>
+            <td>Unknown</td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td>isLinkCheckSpecialConsecutive</td>
+            <td>Unknown</td>
+        </tr>
+    </tbody>
+</table>
