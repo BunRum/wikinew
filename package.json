@@ -2,13 +2,13 @@
   "name": "stf",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bunrum.github.io/stf",
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.10",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "discord-markdown": "^2.5.1",
-    "github-pages": "^3.0.2",
     "html-react-parser": "^3.0.4",
     "isomorphic-dompurify": "^0.22.0",
     "marked": "^4.1.0",
@@ -28,6 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
