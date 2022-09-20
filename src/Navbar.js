@@ -1,5 +1,5 @@
 import { Navbar } from "@nextui-org/react";
-import { useNavigate, HashRouter } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 // import { useLinkClickHandler } from "react-router-dom";
 import { Input } from "@nextui-org/react";

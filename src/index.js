@@ -8,6 +8,7 @@ import { createTheme, NextUIProvider } from "@nextui-org/react"
 import Navigation from './Navbar';
 import Cardassets from './cardassets';
 
+import Home from './files/home';
 import Dbfunc from './files/information/dbfunc';
 
 const darkTheme = createTheme({
@@ -29,7 +30,7 @@ root.render(
       <NextUIProvider theme={darkTheme}>
         <Navigation />
         <Routes>
-          <Route id="home" path="/home" exact element={<App />} />
+          <Route id="home" path="/home" exact element={<Home />} />
           <Route path="/extras">
             <Route path=":assets" element={<App/>}/>
           </Route>
