@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Grid, Text, Card } from "@nextui-org/react";
 // import parse from 'html-react-parser';
 

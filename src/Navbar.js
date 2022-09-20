@@ -7,19 +7,19 @@ import { Input } from "@nextui-org/react";
 const navlinks = [
     {
         linktitle: 'Home',
-        linkto: '/home'
+        linkto: '/wikinew/home'
     },
     {
         linktitle: 'Assets',
-        linkto: '/extras/assets'
+        linkto: '/wikinew/extras/assets'
     },
     {
         linktitle: 'Information',
-        linkto: '/information/dbfunctions'
+        linkto: '/wikinew/information/dbfunctions'
     },
     {
         linktitle: 'Cards',
-        linkto: '/cards'
+        linkto: '/wikinew/cards'
     },
 ]
 

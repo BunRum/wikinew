@@ -5,7 +5,9 @@ import parse from 'html-react-parser';
 export default function App() {
   const [html, setHTML] = useState("");
   useEffect(() => {
-    fetch("/files" + window.location.pathname + ".html")
+    let path = window.location.pathname.replace(/\//,'').replace('wikinew', ''); // Remove first slash from string
+    console.log(path)
+    fetch("/wikinew/files" + path + ".html")
       // .then(async response => {
       //   const isJson = response.headers.get('content-type')?.includes('application/json');
       //   const data = isJson ? await response.json() : null;

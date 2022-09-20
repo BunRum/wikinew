@@ -29,14 +29,14 @@ root.render(
       <NextUIProvider theme={darkTheme}>
         <Navigation />
         <Routes>
-          <Route id="home" path="/home" exact element={<App />} />
-          <Route path="/extras">
+          <Route id="home" path="/wikinew/home" exact element={<App />} />
+          <Route path="/wikinew/extras">
             <Route path=":assets" element={<App/>}/>
           </Route>
-          <Route path="/information">
+          <Route path="/wikinew/information">
             <Route path=":dbfunctions" element={<Dbfunc/>}/>
           </Route>
-          <Route id="home" path="/cards" exact element={<Cardassets />} />
+          <Route id="home" path="/wikinew/cards" exact element={<Cardassets />} />
 
         </Routes>
       </NextUIProvider>

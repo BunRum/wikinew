@@ -1,8 +1,5 @@
 import React from 'react';
 import { Grid, Text, Card, Table, Button, Modal } from "@nextui-org/react";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import DOMpurify from "dompurify";
 export default function Dbfunc() {
 
     const [visible, setVisible] = React.useState(false);
@@ -12,13 +9,7 @@ export default function Dbfunc() {
         setVisible(false);
         console.log("closed");
     };
-
-    const markdown = `
-    **Parsing html in react markdown**
-
-    <u>underlined text</u>
-   `;
-
+    
     return (
         <Grid.Container gap={2} justify="center">
             <Grid xs={8}>
