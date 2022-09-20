@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { createTheme, NextUIProvider } from "@nextui-org/react"
 import Navigation from './Navbar';
@@ -25,22 +25,22 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 document.body.style.zoom = '110%';
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter basename={window.location.pathname}>
       <NextUIProvider theme={darkTheme}>
         <Navigation />
         <Routes>
-          <Route id="home" path="/wikinew/home" exact element={<App />} />
-          <Route path="/wikinew/extras">
+          <Route id="home" path="/home" exact element={<App />} />
+          <Route path="/extras">
             <Route path=":assets" element={<App/>}/>
           </Route>
-          <Route path="/wikinew/information">
+          <Route path="/information">
             <Route path=":dbfunctions" element={<Dbfunc/>}/>
           </Route>
-          <Route id="home" path="/wikinew/cards" exact element={<Cardassets />} />
-
+          <Route id="home" path="/cards" exact element={<Cardassets />} />
+          <Route path="/*" element={<Navigate to="/home" />}  />
         </Routes>
       </NextUIProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 

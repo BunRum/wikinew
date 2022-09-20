@@ -5,7 +5,7 @@ import parse from 'html-react-parser';
 export default function App() {
   const [html, setHTML] = useState("");
   useEffect(() => {
-    let path = window.location.pathname.replace(/\//,'').replace('wikinew', ''); // Remove first slash from string
+    let path = window.location.pathname; // Remove first slash from string
     console.log(path)
     fetch("/wikinew/files" + path + ".html")
       // .then(async response => {
