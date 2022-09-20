@@ -13,10 +13,10 @@ const navlinks = [
         linktitle: 'Assets',
         linkto: '/wikinew/extras/assets'
     },
-    {
-        linktitle: 'Information',
-        linkto: '/wikinew/information/dbfunctions'
-    },
+    // {
+    //     linktitle: 'Information',
+    //     linkto: '/wikinew/information/dbfunctions'
+    // },
     {
         linktitle: 'Cards',
         linkto: '/wikinew/cards'
@@ -35,6 +35,9 @@ export default function Navigation() {
                         }} key={sat.toString()}>{navlinks[sat].linktitle}</Navbar.Link>
                     ))
                 }
+                <Navbar.Link aria-label="Close" onClick={() => {
+                    navigate('/wikinew/information/dbfunctions')
+                }} key={navlinks.length}>Information</Navbar.Link>
             </Navbar.Content>
             <Navbar.Content>
                 <Input placeholder="search" aria-label="Close" />

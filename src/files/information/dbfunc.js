@@ -1,5 +1,7 @@
 import React from 'react';
-import { Grid, Text, Card, Table, Button, Modal } from "@nextui-org/react";
+import { Grid, Text, Card, Table, Modal, Spacer } from "@nextui-org/react";
+// import './dbfunc.css';
+
 export default function Dbfunc() {
 
     const [visible, setVisible] = React.useState(false);
@@ -9,7 +11,7 @@ export default function Dbfunc() {
         setVisible(false);
         console.log("closed");
     };
-    
+
     return (
         <Grid.Container gap={2} justify="center">
             <Grid xs={8}>
@@ -17,7 +19,15 @@ export default function Dbfunc() {
                     <Card.Body>
                         {/* <Text>Bordered card.</Text> */}
                         {/* <Text>{parse(html)}</Text> */}
-
+                        <h2 id="database-function-tables">Database Function Tables</h2>
+                        <hr/>
+                        <Spacer y={0.25}/>
+                        <Text b style={{
+                            'text-align': 'center'
+                        }}> rows with <code>More Info</code> in the info column indicates more information by clicking on the row </Text>
+                        <Spacer y={0.25}/>
+                        <hr/>
+                        <h4 id="causality-types">Causality Types</h4>
                         <Table
                             aria-label="Example static collection table"
                             css={{
@@ -28,27 +38,23 @@ export default function Dbfunc() {
                             onSelectionChange={(keys) => {
                                 // console.log(keys)
                                 var selectedkey = parseInt(keys.anchorKey);
-                                console.log(selectedkey)
                                 if (selectedkey === 3) {
-                                    console.log(selectedkey)
                                     handler();
                                 }
                             }}
                         >
                             <Table.Header>
-                                {/* <Table.Column>NAME</Table.Column>
-                                <Table.Column>ROLE</Table.Column>
-                                <Table.Column>STATUS</Table.Column> */}
-
-                                <Table.Column>Causality ID</Table.Column>
-                                <Table.Column>Name</Table.Column>
-                                <Table.Column>Description</Table.Column>
-                                <Table.Column>cau_val1</Table.Column>
-                                <Table.Column>cau_val2</Table.Column>
-                                <Table.Column>cau_val3</Table.Column>
-                                <Table.Column>info</Table.Column>
+                                <Table.Column align='center'>Causality ID</Table.Column>
+                                <Table.Column align='center'>Name</Table.Column>
+                                <Table.Column align='center'>Description</Table.Column>
+                                <Table.Column align='center'>cau_val1</Table.Column>
+                                <Table.Column align='center'>cau_val2</Table.Column>
+                                <Table.Column align='center'>cau_val3</Table.Column>
+                                <Table.Column align='center'>info</Table.Column>
                             </Table.Header>
-                            <Table.Body>
+                            <Table.Body css={{
+                                'text-align': 'center'
+                            }}>
                                 <Table.Row key="0">
                                     <Table.Cell align="center">0</Table.Cell>
                                     <Table.Cell>isNoneRule</Table.Cell>
@@ -77,21 +83,6 @@ export default function Dbfunc() {
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
-
-                                {/* <Popover>
-                                    <Popover.Trigger>
-
-                                    </Popover.Trigger>
-                                    <Popover.Content>
-                                        <Card>
-                                            <Card.Body>
-                                                <Text>
-                                                    hi
-                                                </Text>
-                                            </Card.Body>
-                                        </Card>
-                                    </Popover.Content>
-                                </Popover> */}
                                 <Table.Row key="3">
                                     <Table.Cell align="center">3</Table.Cell>
                                     <Table.Cell>isOverEnergy</Table.Cell>
@@ -100,7 +91,7 @@ export default function Dbfunc() {
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell>
-                                        <Button auto flat onPress={handler}>!</Button>
+                                        <Text b><code>More Info</code></Text>
                                         <Modal
                                             closeButton
                                             aria-labelledby="modal-title"
