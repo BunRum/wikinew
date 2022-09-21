@@ -1,35 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Grid, Text, Card } from "@nextui-org/react";
+import React, {useState} from 'react';
+import { Grid, Card } from "@nextui-org/react";
 import parse from 'html-react-parser';
+import { useLocation } from 'react-router';
 
-export default function Home() {
+export default function Home(match) {
   const [html, setHTML] = useState("");
-  useEffect(() => {
-    fetch("wikinew/files/home.html")
-      // .then(async response => {
-      //   const isJson = response.headers.get('content-type')?.includes('application/json');
-      //   const data = isJson ? await response.json() : null;
-      //   if (!response.ok) {
-      //     // get error message from body or default to response status
-      //     const error = (data && data.message) || response.status;
-      //     return Promise.reject(error);
-      //   }
-      // })
-      // .catch(error => {
-      //   setHTML('<h2 id="getting-started-with-unidokkan">Getting Started with UniDokkan</h2>');
-      // })
-      .then(data => data.text())
-      .then(text => {
-        setHTML(text);
-      })
-  }, []);
+  let location = useLocation().pathname;
+  fetch(`${window.location.pathname}/files${location}.html`)
+    .then(data => data.text())
+    .then(text => {
+      setHTML(text);
+    })
   return (
     <Grid.Container gap={2} justify="center">
       <Grid xs={8}>
         <Card variant="bordered">
           <Card.Body>
-            {/* <Text>Bordered card.</Text> */}
-            <Text>{parse(html)}</Text>
+            {parse(html)}
           </Card.Body>
         </Card>
       </Grid>
