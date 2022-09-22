@@ -4,10 +4,10 @@ import './index.css';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { createTheme, NextUIProvider } from "@nextui-org/react"
-import Navigation from './Navbar';
-import Cardassets from './cardassets';
 
-import  Home  from './files/home';
+import Navigation from './Navbar';
+import Cardassets from './files/cardassets';
+import Home from './files/home';
 import Dbfunc from './files/information/dbfunc';
 import Assets from './files/extras/assets';
 

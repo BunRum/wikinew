@@ -1,0 +1,25 @@
+{
+    "IsNoneRule": {
+        "id": 0
+    },
+    "IsOverHpRate": {
+        "id": 1,
+        "description": "HP is above percent",
+        "cau_value1": "Percentage"
+    },
+    "IsUnderHpRate": {
+        "id": 2,
+        "description": "HP is below percent",
+        "cau_value1": "Percentage"
+    },
+    "IsOverEnergyRate": {
+        "id": 3,
+        "description": "Ki is above a number",
+        "cau_value1": "Ki amount"
+    },
+    "isUnderEnergy": {
+        "id": 4,
+        "description": "Ki is below a number",
+        "cau_value1": "Ki Amount"
+    }
+}

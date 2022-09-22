@@ -1,114 +1,22 @@
 import React from 'react';
-import { Grid, Text, Card, Table, Modal, Spacer, Image } from "@nextui-org/react";
+import { Grid, Text, Card, Table, Modal, Spacer, Image, Code } from "@nextui-org/react";
+import casualtyjson from './Casualties.json';
+import './dbfunc.css'
 
-const casualties = [
+const modaldescriptions = [
     {
-        name: 'IsNoneRule',
-        description: 'Nothing',
-        val1: '',
-        val2: '',
-        val3: '',
-        Info: false
-    },
-    {
-        name: 'IsOverHpRate',
-        description: 'HP is above percent',
-        val1: 'Percentage',
-        val2: '',
-        val3: '',
-        Info: false
-    },
-    {
-        name: 'IsUnderHpRate',
-        description: 'HP is below percent',
-        val1: 'Percentage',
-        val2: '',
-        val3: '',
-        Info: false
-    },
-    {
-        name: 'IsOverEnergy',
-        description: 'Ki is above a number',
-        val1: 'Ki Amount',
-        val2: '',
-        val3: '',
-        Info: true,
-        modaldescription: function () {
-            return (
-                <Text>
-                    To make passives like "when Ki is X or more", the formula is pretty simple:
-                    <br />
-                    eball_num100 (<code>cards</code>) * (cau_value/100) (<code>skill_casualties</code>) = ki requirement
-                </Text>
-            )
-        }
-    },
-    {
-        name: 'IsUnderEnergy',
-        description: 'Ki is below a number',
-        val1: 'Ki Amount',
-        val2: '',
-        val3: '',
-        Info: false
-    },
-    {
-        name: 'funny test',
-        description: 'check it out dog',
-        val1: 'fr check it out tho',
-        val2: '',
-        val3: '',
-        Info: true,
-        modaldescription: function () {
-            return (
-                <Image src='https://media.discordapp.net/attachments/1014637907761430619/1021470973901418496/or0dr9992ke.gif' alt='stupid ass bitch'/>
-            )
-        }
-    },
-    {
-        name: 'isElapsedTurn',
-    }, 
-    {
-        name: 'isPartyRaceType',
-    }, 
-    {
-        name: 'isEnemyRaceType',
-    }, 
-    {
-        name: 'isOverFightingPower',
-    }, 
-    {
-        name: 'isUnderFightingPower',
-    }, 
-    {
-        name: 'isOverHpRateOverEnergy',
-    }, 
-    {
-        name: 'isOverHpRateUnderEnergy',
-    }, 
-    {
-        name: 'isUnderHpRateOverEnergy',
-    }, 
-    {
-        name: 'isUnderHpRateUnderEnergy',
-    }, 
-    {
-        name: 'isFirstAttack',
-    }, 
-    {
-        name: 5,
-    }, 
-    
+        "IsOverEnergyRate": (
+            <Text>
+                To make passives like "when Ki is X or more", the formula is pretty simple:
+                <br />
+                eball_num100 (<code>cards</code>) * (cau_value/100) (<code>skill_casualties</code>) = ki requirement
+            </Text>
+        ),
+        'funny test': (
+            <Image src='https://media.discordapp.net/attachments/1014637907761430619/1021470973901418496/or0dr9992ke.gif' alt='stupid ass bitch' />
+        ),
+    }
 ]
- const template = ['Info', 'description', 'val1', 'val2', 'val3']
-casualties.forEach(function (key, index) {
-    // console.log(index, key);
-   
-
-    // console.log(index, key.Info, key.description, key.val1, key.val2, key.val3)
-    template.forEach(function(tempkey, tempindex) {
-        console.log(key[tempkey])
-    })
-});
 
 export default function Dbfunc() {
 
@@ -119,7 +27,7 @@ export default function Dbfunc() {
         setVisible(false);
         console.log("closed");
     };
-
+    // var casualties = JSON.parse(casualtyjson)
     return (
         <Grid.Container gap={2} justify="center">
             <Grid xs={8}>
@@ -143,16 +51,13 @@ export default function Dbfunc() {
                                 minWidth: "100%",
                             }}
                             selectionMode='single'
-                            onSelectionChange={(keys) => {
-                                // console.log(keys)
-                                var selectedkey = parseInt(keys.anchorKey);
-                                console.log(casualties[selectedkey])
-                                if (casualties[selectedkey].Info === true) {
-                                    setVisible(true)
-                                    setModalDescription(casualties[selectedkey].modaldescription)
-                                    // console.log(casualties[selectedkey])
-                                }
-                            }}
+                        onSelectionChange={(keys) => {
+                            var selectedkey = keys.anchorKey;
+                            if (modaldescriptions[0][selectedkey]) {
+                                setVisible(true)
+                                setModalDescription(modaldescriptions[0][selectedkey])
+                            }
+                        }}
                         >
                             <Table.Header>
                                 <Table.Column align='center'>Causality ID</Table.Column>
@@ -167,18 +72,29 @@ export default function Dbfunc() {
                                 'textAlign': 'center'
                             }}>
                                 {
-                                    Object.entries(casualties).map(([sat], i) => (
-
-                                        <Table.Row key={sat}>
-                                            <Table.Cell align="center">{sat}</Table.Cell>
-                                            <Table.Cell align="center">{casualties[sat].name}</Table.Cell>
-                                            <Table.Cell align="center">{casualties[sat].description?casualties[sat].description:"nothing"}</Table.Cell>
-                                            <Table.Cell align="center">{!(casualties[sat].val1 === ''|null) ? <Text b><code>{casualties[sat].val1}</code></Text> : 'Nothing'}</Table.Cell>
-                                            <Table.Cell align="center">{!(casualties[sat].val2 === ''|undefined) ? <Text b><code>{casualties[sat].val2}</code></Text> : 'Nothing'}</Table.Cell>
-                                            <Table.Cell align="center">{!(casualties[sat].val3 === '') ? <Text b><code>{casualties[sat].val3}</code></Text> : 'Nothing'}</Table.Cell>
-                                            <Table.Cell align="center">{casualties[sat].Info ? <Text b><code>More Info</code></Text> : ''}</Table.Cell>
+                                    // Object.entries(casualtyjson).map((casualty, i) => (
+                                    //     console.log(casualty),
+                                    //     <Table.Row key={i}>
+                                    //         <Table.Cell align="center">{casualty.id}</Table.Cell>
+                                    //         <Table.Cell align="center">{casualty.id}</Table.Cell>
+                                    //         <Table.Cell align="center">{casualty.description ? casualty.description : "nothing"}</Table.Cell>
+                                    //         <Table.Cell align="center">{casualty.val1 ? <Text b><code>{casualty.val1}</code></Text> : "None"}</Table.Cell>
+                                    //         <Table.Cell align="center">{casualty.val2 ? <Text b><code>{casualty.val2}</code></Text> : "None"}</Table.Cell>
+                                    //         <Table.Cell align="center">{casualty.val3 ? <Text b><code>{casualty.val3}</code></Text> : "None"}</Table.Cell>
+                                    //         <Table.Cell align="center">{casualty.Info ? <Text b><code>More Info</code></Text> : ''}</Table.Cell>
+                                    //     </Table.Row>
+                                    // ))
+                                    Object.entries(casualtyjson).map((key, index) => (
+                                        // console.log(index),
+                                        <Table.Row key={key[0]}>
+                                            <Table.Cell align="center">{key[1].id}</Table.Cell>
+                                            <Table.Cell align="center">{key[0]}</Table.Cell>
+                                            <Table.Cell align="center">{key[1].description ? key[1].description : <Text b><Code className='Null'>Nothing</Code></Text>}</Table.Cell>
+                                            <Table.Cell align="center">{key[1].cau_value1 ? <Text b><code>{key[1].cau_value1}</code></Text> : <Text b><Code className='Null'>Nothing</Code></Text>}</Table.Cell>
+                                            <Table.Cell align="center">{key[1].cau_value2 ? <Text b><code>{key[1].cau_value2}</code></Text> : <Text b><Code className='Null'>Nothing</Code></Text>}</Table.Cell>
+                                            <Table.Cell align="center">{key[1].cau_value3 ? <Text b><code>{key[1].cau_value3}</code></Text> : <Text b><Code className='Null'>Nothing</Code></Text>}</Table.Cell>
+                                            <Table.Cell align="center">{modaldescriptions[0][key[0]] ? <Text b><code>More Info</code></Text> : <Text b><Code className='Null'>Nothing</Code></Text>}</Table.Cell>
                                         </Table.Row>
-
                                     ))
                                 }
                             </Table.Body>
