@@ -8,10 +8,10 @@ const javaScriptMarkdownCodeblock = `
 drop table if exists variables;
 
 create temporary table "variables" (
-	"Client"	TEXT NOT NULL,
+	"Client"	text not null,
 	"CustomCardResourceFolder" integer default 1642010,
-	"CustomCardID"	INTEGER DEFAULT 1642011,
-	"StartingID" INTEGER NOT NULL DEFAULT 694200,
+	"CustomCardID"	integer default 1642011,
+	"StartingID" integer not null default 694200,
 	"date" datetime not null default CURRENT_TIMESTAMP
 );
 `;

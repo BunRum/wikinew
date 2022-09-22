@@ -20,6 +20,226 @@
     "isUnderEnergy": {
         "id": 4,
         "description": "Ki is below a number",
-        "cau_value1": "Ki Amount"
+        "cau_value1": "Ki amount"
+    },
+    "isElapsedTurn": {
+        "id": 5,
+        "description": "Battle has past turn number",
+        "cau_value1": "Turn"
+    },
+    "isPartyRaceType": {
+        "id": 6,
+        "description": "Checks if entire deck has a certain link skill",
+        "cau_value1": "Link Skill ID"
+    },
+    "isEnemyRaceType": {
+        "id": 7,
+        "description": "Checks if enemy has a certain link skill",
+        "cau_value1": "Link Skill ID"
+    },
+    "isOverFightingPower": {
+        "id": 8,
+        "description": "Checks current attack and defense is over a number",
+        "cau_value1": "Attack",
+        "cau_value2": "Defense"
+    },
+    "isUnderFightingPower": {
+        "id": 9,
+        "description": "Checks current attack and defense is under a number",
+        "cau_value1": "Attack",
+        "cau_value2": "Defense"
+    },
+    "isOverHpRateOverEnergy": {
+        "id": 10,
+        "description": "HP is above percent, Ki is above number",
+        "cau_value1": "HP Percent",
+        "cau_value2": "Ki Amount"
+    },
+    "isOverHpRateUnderEnergy": {
+        "id": 11,
+        "description": "HP is above percent, Ki is below number",
+        "cau_value1": "HP Percent",
+        "cau_value2": "Ki Amount"
+    },
+    "isUnderHpRateOverEnergy": {
+        "id": 12,
+        "description": "HP is below percent, Ki is above number",
+        "cau_value1": "HP Percent",
+        "cau_value2": "Ki Amount"
+    },
+    "isUnderHpRateUnderEnergy": {
+        "id": 13,
+        "description": "HP is under percent, Ki is below number",
+        "cau_value1": "HP Percent",
+        "cau_value2": "Ki Amount"
+    },
+    "isFirstAttack": {
+        "id": 14,
+        "description": "Card is in first slot"
+    },
+    "isOverTargetNum": {
+        "id": 15,
+        "description": "More than a number of enemies",
+        "cau_value1": "Number of Enemies"
+    },
+    "isUnderTargetNum": {
+        "id": 16,
+        "description": "Less than a number of enemies",
+        "cau_value1": "Number of Enemies"
+    },
+    "isOverTargetHpRate": {
+        "id": 17,
+        "description": "Enemy target HP above a percent",
+        "cau_value1": "HP Percent"
+    },
+    "isUnderTargetHpRate": {
+        "id": 18,
+        "description": "Enemy target HP below a percent",
+        "cau_value1": "HP Percent"
+    },
+    "isAttackOrder": {
+        "id": 19,
+        "description": "Checks card slot position",
+        "cau_value1": "Slot (0, 1, 2)"
+    },
+    "isOverEnergyCondition": {
+        "id": 20,
+        "description": "Ki is above percent",
+        "cau_value1": "Ki Percent"
+    },
+    "isUnderEnergyCondition": {
+        "id": 21,
+        "description": "Ki is below percent",
+        "cau_value1": "Ki Percent"
+    },
+    "isPartyExistChara": {
+        "id": 22,
+        "description": "Check if character is present in deck",
+        "cau_value1": "Card Unique Info ID"
+    },
+    "isLinkNum": {
+        "id": 23,
+        "description": "Check if at number of links or greater are active",
+        "cau_value1": "Number of links"
+    },
+    "isHitDamaged": {
+        "id": 24,
+        "description": "Activates upon being attacked"
+    },
+    "isTargetKill": {
+        "id": 25,
+        "description": "Activates when target is killed"
+    },
+    "isOverHpRateEnableSpecial": {
+        "id": 26,
+        "description": "HP is above percent, card has enough ki to super",
+        "cau_value1": "HP Percent"
+    },
+    "isUnderHpRateEnableSpecial": {
+        "id": 27,
+        "description": "HP is below percent, card has enough ki to super",
+        "cau_value1": "HP Percent"
+    },
+    "isSlotElementType": {
+        "id": 28,
+        "description": "Checks if any cards on rotation are a certain element",
+        "cau_value1": "Element Type"
+    },
+    "isEnemyExistChara": {
+        "id": 29,
+        "description": "Check if character is an enemy",
+        "cau_value1": "Card Unique Info ID"
+    },
+    "isGuardSuccess": {
+        "id": 30,
+        "description": "Check if card is guarding"
+    },
+    "isCombinationAttack": {
+        "id": 31,
+        "description": "Activates if there are three enemy attacks"
+    },
+    "isChangeEnergyBallColor": {
+        "id": 32,
+        "description": "Checks if there is a ki of a certain type on the board",
+        "cau_value1": "Ki Type"
+    },
+    "isBetweenHpRate": {
+        "id": 33,
+        "description": "Checks if card HP percent is between two numbers",
+        "cau_value1": "HP Percent Lower",
+        "cau_value2": "HP Percent Higher"
+    },
+    "isOverTeamCategoryNum": {
+        "id": 34,
+        "description": "Check if category card is present",
+        "cau_value1": "0 for deck; 1 for enemy",
+        "cau_value2": "Category ID",
+        "cau_value3": "Unknown"
+    },
+    "hasAllElementBitpatternCards": {
+        "id": 35,
+        "description": "Checks if deck has all types of an element bitset",
+        "cau_value1": "Element Bitset"
+    },
+    "isOverHpRateAndElapsedTurn": {
+        "id": 36,
+        "description": "HP is above percent, battle has past turn number",
+        "cau_value1": "HP Percent",
+        "cau_value2": "Turn"
+    },
+    "isUnderHpRateAndElapsedTurn": {
+        "id": 37,
+        "description": "HP is below percent, battle has past turn number",
+        "cau_value1": "HP Percent",
+        "cau_value2": "Turn"
+    },
+    "isTargetEnemyCondition": {
+        "id": 38,
+        "description": "Enemy has required status effects",
+        "cau_value1": "Status Effect Flags",
+        "cau_value2": "Unknown"
+    },
+    "isTargetElementTypeBitPattern": {
+        "id": 39,
+        "description": "Check if enemy element matches element bitset",
+        "cau_value1": "Element Bitset"
+    },
+    "isSpecialAttack": {
+        "id": 40,
+        "description": "Activates if card has used a special attack"
+    },
+    "isOverTeamUniqueCardNum": {
+        "id": 41,
+        "description": "Activates if deck has card with name",
+        "cau_value1": "Unknown",
+        "cau_value2": "Card Unique Info ID",
+        "cau_value3": "Unknown"
+    },
+    "isEnergyBallGetNum": {
+        "id": 42,
+        "description": "Activates if card gets more then specified Ki amount",
+        "cau_value1": "Unknown",
+        "cau_value2": "Ki Amount"
+    },
+    "isDodgeSuccess": {
+        "id": 43,
+        "description": "Activates if card has evaded an attack",
+        "cau_value1": "Unknown",
+        "cau_value2": "Unknown",
+        "cau_value3": "Unknown"
+    },
+    "isCountUp": {
+        "id": 44,
+        "description": "Unknown",
+        "cau_value1": "Unknown",
+        "cau_value2": "Unknown",
+        "cau_value3": "Unknown"
+    },
+    "isContainsCardByCategoryAndUniqueInfo": {
+        "id": 45,
+        "description": "Activates if card is in target category and unique info relations",
+        "cau_value1": "Target (team, turn, enemy...)",
+        "cau_value2": "Category (id, not sub target)",
+        "cau_value3": "card_unique_info_set_relations"
     }
 }
