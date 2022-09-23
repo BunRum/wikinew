@@ -767,10 +767,9 @@
     {
       "name": "isCountUp",
       "id": 44,
-      "description": "Unknown",
-      "cau_value1": "Unknown",
-      "cau_value2": "Unknown",
-      "cau_value3": "Unknown"
+      "description": " 1 SA performed, 2 Attacks performed, 3 Attacks revived",
+      "cau_value1": "1/2/3",
+      "cau_value2": "Amount"
     },
     {
       "name": "isContainsCardByCategoryAndUniqueInfo",
@@ -779,6 +778,10 @@
       "cau_value1": "Target (team, turn, enemy...)",
       "cau_value2": "Category (id, not sub target)",
       "cau_value3": "card_unique_info_set_relations"
+    },
+    {
+      "name": "isExecutedRevivalSkill",
+      "id": 46
     }
   ]
 }
