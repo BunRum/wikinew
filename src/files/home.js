@@ -1,24 +1,46 @@
-import React, {useState} from 'react';
-import { Grid, Card } from "@nextui-org/react";
-import parse from 'html-react-parser';
-import { useLocation } from 'react-router';
+import React from 'react';
+import { Grid, Card, Image } from "@nextui-org/react";
 
 export default function Home(match) {
-  const [html, setHTML] = useState("");
-  let location = useLocation().pathname;
-  fetch(`${window.location.pathname}/files/lmfao.html`)
-    .then(data => data.text())
-    .then(text => {
-      setHTML(text);
-    })
+  // const [html, setHTML] = useState("");
+  // let location = useLocation().pathname;
+  // fetch(`${window.location.pathname}/files/lmfao.html`)
+  //   .then(data => data.text())
+  //   .then(text => {
+  //     setHTML(text);
+  //   })
   return (
-    <Grid.Container gap={2} justify="center">
-      <Grid xs={8}>
-        <Card variant="bordered" css={{
-          textAlign: 'center'
-        }}>
+    <Grid.Container gap={0} justify="center" >
+
+      <Grid>
+        <Card variant="bordered">
           <Card.Body>
-            {parse(html)}
+            <Image src="https://cdn.discordapp.com/attachments/1014637907761430619/1022703469456523315/IMG_1886.png" showSkeleton css={{
+              // maxWidth: '60%',
+              display: 'block'
+            }} />
+          </Card.Body>
+        </Card>
+      </Grid>
+
+      <Grid>
+        <Card variant="bordered">
+          <Card.Body>
+            <Image src="https://cdn.discordapp.com/attachments/1014637907761430619/1022703469456523315/IMG_1886.png" showSkeleton css={{
+              // maxWidth: '60%',
+              display: 'block'
+            }} />
+          </Card.Body>
+        </Card>
+      </Grid>
+
+      <Grid>
+        <Card variant="bordered">
+          <Card.Body>
+            <Image src="https://cdn.discordapp.com/attachments/1014637907761430619/1022703469456523315/IMG_1886.png" showSkeleton css={{
+              // maxWidth: '60%',
+              display: 'block'
+            }} />
           </Card.Body>
         </Card>
       </Grid>

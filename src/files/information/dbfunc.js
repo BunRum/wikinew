@@ -149,8 +149,10 @@ export default function Dbfunc() {
                                 <Table
                                     aria-label="Casualty Table"
                                     css={{
-                                        height: "5%",
-                                        'textAlign': 'left'
+                                        minWidth: "100%",
+                                        height: 'auto',
+                                        'textAlign': 'left',
+                                        'whiteSpace': 'pre-line'
                                     }}
                                     selectionMode='single'
                                     onSelectionChange={(keys) => {
@@ -160,11 +162,7 @@ export default function Dbfunc() {
                                             setModalDescription(modaldescriptions[selectedkey])
                                         }
                                     }}
-                                    compact
-                                    headerLined
-                                    lined
                                     shadow={false}
-                                    striped
                                 >
                                     <Table.Header>
                                         <Table.Column>Causalty ID</Table.Column>
@@ -175,18 +173,18 @@ export default function Dbfunc() {
                                         <Table.Column align='left'>cau_val3</Table.Column>
                                         <Table.Column align='center'>info</Table.Column>
                                     </Table.Header>
-                                    <Table.Body>
+                                    <Table.Body css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>
                                         {
                                             Object.values(datajson.Casualties).map((key, index) => (
-                                                console.log(key, index),
+                                                // console.log(key, index),
                                                 <Table.Row key={key.name}>
                                                     <Table.Cell >{key.id}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'left' }}>{key.name}</Table.Cell>
-                                                    <Table.Cell>{key.description ? key.description : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'center' }}>{key.cau_value1 ? <Text b><code className='IS'>{key.cau_value1}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'center' }}>{key.cau_value2 ? <Text b size={1}><code className='IS'>{key.cau_value2}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'left' }}>{key.cau_value3 ? <Text b size={1}><code className='IS'>{key.cau_value3}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'center' }}>{modaldescriptions[key.name] ? <Text b><code>More Info</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.name}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.description ? key.description : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.cau_value1 ? <Text b><code className='IS'>{key.cau_value1}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.cau_value2 ? <Text b size={1}><code className='IS'>{key.cau_value2}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.cau_value3 ? <Text b size={1}><code className='IS'>{key.cau_value3}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{modaldescriptions[key.name] ? <Text b><code>More Info</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
                                                 </Table.Row>
                                             ))
                                         }
@@ -202,7 +200,7 @@ export default function Dbfunc() {
                             </Collapse>
                             <Collapse title="Efficacy Types" expanded>
                                 <Table
-                                aria-label="Efficacy Table"
+                                    aria-label="Efficacy Table"
                                     selectionMode='single'
                                     onSelectionChange={(keys) => {
                                         var selectedkey = keys.anchorKey;
@@ -211,11 +209,7 @@ export default function Dbfunc() {
                                             setModalDescription(modaldescriptions[selectedkey])
                                         }
                                     }}
-                                    compact
-                                    headerLined
-                                    lined
                                     shadow={false}
-                                    striped
                                 >
                                     <Table.Header>
                                         <Table.Column>Efficacy ID</Table.Column>
@@ -256,6 +250,54 @@ export default function Dbfunc() {
                                 </Table>
                             </Collapse>
                         </Collapse.Group>
+                        <Text h3 css={{ padding: '0.75rem' }}>Calc Options</Text>
+                        {/* <Spacer x={4}/> */}
+                        <Card
+                            css={{
+                                maxWidth: '19%',
+                                filter: 'drop-shadow(0 5px 5px rgb(0 0 0 / 0.15));', // shadows.md
+                            }}
+                            shadow={false}
+                            // variant='shadow'
+                            
+                        >
+                            <Card.Body>
+                                <Table
+                                    aria-label="Calc Options"
+                                    css={{
+                                        alignItems: 'center'
+                                    }}
+                                    shadow={false}
+                                >
+                                    <Table.Header>
+                                        <Table.Column>Calc Option</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>Description</Table.Column>
+                                    </Table.Header>
+                                    <Table.Body css={{ 'textAlign': 'center' }}> 
+                                        <Table.Row key='cplus' >
+                                            <Table.Cell>0</Table.Cell>
+                                            <Table.Cell>Calc Plus</Table.Cell>
+                                        </Table.Row>
+                                        <Table.Row key='cminus'>
+                                            <Table.Cell>1</Table.Cell>
+                                            <Table.Cell>Calc Minus</Table.Cell>
+                                        </Table.Row>
+                                        <Table.Row key='cpplus'>
+                                            <Table.Cell>2</Table.Cell>
+                                            <Table.Cell>Calc Percent Plus</Table.Cell>
+                                        </Table.Row>
+                                        <Table.Row key='cpminus'>
+                                            <Table.Cell>3</Table.Cell>
+                                            <Table.Cell>Calc Percent Minus</Table.Cell>
+                                        </Table.Row>
+                                        <Table.Row key='cequal'>
+                                            <Table.Cell>4</Table.Cell>
+                                            <Table.Cell>Calc Equal</Table.Cell>
+                                        </Table.Row>
+                                    </Table.Body>
+                                </Table>
+                            </Card.Body>
+                        </Card>
                     </Card.Body>
                 </Card>
             </Grid>
