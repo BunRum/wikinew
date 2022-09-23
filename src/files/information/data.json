@@ -1,0 +1,784 @@
+﻿{
+  "efficacies": [
+    {
+      "id": "0",
+      "name": "Change Invalid Bad Condition",
+      "description": "(Immune to negative effects)"
+    },
+    {
+      "id": "1",
+      "name": "Change ATK Param",
+      "eff_value1": "ATK Value"
+    },
+    {
+      "id": "2",
+      "name": "Change DEF Param",
+      "eff_value1": "DEF Value"
+    },
+    {
+      "id": "3",
+      "name": "Change ATK DEF Param",
+      "eff_value1": "ATK Value",
+      "eff_value2": " DEF Value"
+    },
+    {
+      "id": "4",
+      "name": "Change Heal HP",
+      "eff_value1": "HP Value"
+    },
+    {
+      "id": "5",
+      "name": "Change Enegy Param",
+      "eff_value1": "Ki Value"
+    },
+    {
+      "id": "8",
+      "name": "Change Condition Delay"
+    },
+    {
+      "id": "9",
+      "name": "Change Condition Stun ",
+      "description": "Use probability for chance "
+    },
+    {
+      "id": "11",
+      "name": "Change Attack Order "
+    },
+    {
+      "id": "12",
+      "name": "Change Pain Attack"
+    },
+    {
+      "id": "13",
+      "name": "Change Resist Damage",
+      "eff_value1": "100 - Reduction Value (%)",
+      "description": "For 32% reduction, put 68 (100 - 32 = 68)"
+    },
+    {
+      "id": "16",
+      "name": "Change Element Type ATK ",
+      "eff_value1": "Element id",
+      "eff_value2": "ATK Value",
+      "description": "Use Element id"
+    },
+    {
+      "id": "17",
+      "name": "Change Element Type DEF ",
+      "eff_value1": "Element id",
+      "eff_value2": "DEF Value",
+      "description": "Use Element id"
+    },
+    {
+      "id": "18",
+      "name": "Change Element Type ATK DEF ",
+      "eff_value1": "Element id",
+      "eff_value2": "ATK Value",
+      "eff_value3": "DEF Value",
+      "description": "Use Element id"
+    },
+    {
+      "id": "19",
+      "name": "Change Element Type HP Param",
+      "eff_value1": "Element id",
+      "eff_value2": "HP Value",
+      "description": "Only works for Leaderskills"
+    },
+    {
+      "id": "20",
+      "name": "Change Element Type Enegy Param ",
+      "eff_value1": "Element id",
+      "eff_value2": "Ki Value",
+      "description": "Use Element id"
+    },
+    {
+      "id": "21",
+      "name": "Change Recovery "
+    },
+    {
+      "id": "22",
+      "name": "Change Condition Heal ",
+      "description": "(Remove negative effects)"
+    },
+    {
+      "id": "24",
+      "name": "Change Guard Break (Disables enemy's guard)",
+      "description": "Use probability for chance, Always use target enemy or all enemies "
+    },
+    {
+      "id": "26",
+      "name": "Change Absorb Special Energy"
+    },
+    {
+      "id": "27",
+      "name": "Change Resist Special Damage"
+    },
+    {
+      "id": "28",
+      "name": "Change Absorb Deal Damage ",
+      "eff_value1": "Recovery Value"
+    },
+    {
+      "id": "34",
+      "name": "Change Dokkan Gauge Bonus "
+    },
+    {
+      "id": "35",
+      "name": "Change Heal Bonus "
+    },
+    {
+      "id": "36",
+      "name": "Change Special Bonus"
+    },
+    {
+      "id": "37",
+      "name": "Change Energy Bonus "
+    },
+    {
+      "id": "38",
+      "name": "Change Link Skill Bonus ",
+      "eff_value1": "Link Effect Value Boost (%)"
+    },
+    {
+      "id": "39",
+      "name": "Change Element Type Energy Bonus"
+    },
+    {
+      "id": "40",
+      "name": "Change Element Type Linkage Bonus "
+    },
+    {
+      "id": "43",
+      "name": "Change HP ATK "
+    },
+    {
+      "id": "44",
+      "name": "Change Element Type HP ATK"
+    },
+    {
+      "id": "46",
+      "name": "Change Passive Probability Bonus"
+    },
+    {
+      "id": "47",
+      "name": "Change Condition Psychic (Disables enemy's guard)",
+      "description": "Use probability for chance"
+    },
+    {
+      "id": "48",
+      "name": "Change Condition Seal ",
+      "description": "Use probability for chance"
+    },
+    {
+      "id": "50",
+      "name": "Change Invalid Bad Condition (Immune to negative effects)",
+      "description": "Use probability for chance"
+    },
+    {
+      "id": "51",
+      "name": "Change Energy Ball Color",
+      "eff_value1": "Change Element Orb",
+      "eff_value2": "Target Element Orb",
+      "description": "Use Element id"
+    },
+    {
+      "id": "52",
+      "name": "Change Resurrection (Survive K.O. attacks)",
+      "description": "Use probability for chance"
+    },
+    {
+      "id": "53",
+      "name": "Ignore Enemy Defense (Reduces it to 0)",
+      "description": "Use probability for chance"
+    },
+    {
+      "id": "54",
+      "name": "Change Invalid Combination Attack Bonus "
+    },
+    {
+      "id": "55",
+      "name": "Change Target DEF And Self ATK"
+    },
+    {
+      "id": "56",
+      "name": "Change Target DEF And Self DEF"
+    },
+    {
+      "id": "57",
+      "name": "Change Target DEF And Self Energy "
+    },
+    {
+      "id": "58",
+      "name": "Change Energy Ball Heal "
+    },
+    {
+      "id": "59",
+      "name": "Change Energy Ball Proportional ATK ",
+      "eff_value1": "ATK Value"
+    },
+    {
+      "id": "60",
+      "name": "Change Energy Ball Proportional DEF ",
+      "eff_value1": "DEF Value"
+    },
+    {
+      "id": "61",
+      "name": "Change Energy Ball Proportional ATK DEF ",
+      "eff_value1": "ATK Value",
+      "eff_value2": " DEF Value"
+    },
+    {
+      "id": "63",
+      "name": "Change Special Energy Cost"
+    },
+    {
+      "id": "64",
+      "name": "Change Element Type Energy Ball Proportional ATK",
+      "eff_value1": "Element id",
+      "eff_value2": " ATK Value",
+      "eff_value3": "Element id"
+    },
+    {
+      "id": "65",
+      "name": "Change Element Type Energy Ball Proportional DEF",
+      "eff_value1": "Element id",
+      "eff_value2": " DEF Value",
+      "eff_value3": "Element id"
+    },
+    {
+      "id": "66",
+      "name": "Change Element Type Energy Ball Proportional ATK DEF",
+      "eff_value1": "Element id",
+      "eff_value2": " ATK & DEF Value",
+      "eff_value3": "Element id"
+    },
+    {
+      "id": "67",
+      "name": "Change Energy Ball Color Bitpattern ",
+      "eff_value1": "Change KI Bitpattern",
+      "eff_value2": "Target KI Bitpattern",
+      "description": "Use Bitpattern"
+    },
+    {
+      "id": "68",
+      "name": "Change Energy Ball Proportional Bitpattern",
+      "eff_value1": "Insert Ki Bitpattern ",
+      "eff_value2": "Passive Type (See details)",
+      "eff_value3": " Value per Orb",
+      "description": " 1= ATK, 2= Heal, 3= DEF, 4= Crit "
+    },
+    {
+      "id": "69",
+      "name": "Change Energy Ball Color Specify Random ",
+      "eff_value1": "Insert Ki Bitpattern ",
+      "eff_value2": "-1",
+      "eff_value3": "-1",
+      "description": "Use Bitpattern for eff_value1"
+    },
+    {
+      "id": "70",
+      "name": "Change Energy Ball Color Specify \r\nRandom Without Obstacles "
+    },
+    {
+      "id": "71",
+      "name": "Change HP Range ATK ",
+      "eff_value1": "Min HP ATK Value (%)",
+      "eff_value2": "Max HP ATK Value (%)",
+      "eff_value3": "1100"
+    },
+    {
+      "id": "72",
+      "name": "Change HP Range DEF ",
+      "eff_value1": "Min HP DEF Value (%)",
+      "eff_value2": "Max HP DEF Value (%)",
+      "eff_value3": "1100"
+    },
+    {
+      "id": "73",
+      "name": "Change HP Range ATK DEF ",
+      "eff_value1": "Min HP ATK & DEF (%)",
+      "eff_value2": " Max HP ATK & DEF (%)",
+      "eff_value3": "1100"
+    },
+    {
+      "id": "74",
+      "name": "Change HP Range Ball Heal "
+    },
+    {
+      "id": "75",
+      "name": "Change Condition Disable Swap "
+    },
+    {
+      "id": "76",
+      "name": "Change Condition Super Effective ATK",
+      "description": "Use probability for chance"
+    },
+    {
+      "id": "77",
+      "name": "Change Reset Ball Color "
+    },
+    {
+      "id": "78",
+      "name": "Guard Against All Attacks ",
+      "description": "Use probability for chance"
+    },
+    {
+      "id": "79",
+      "name": "Metamorphic Transformation",
+      "eff_value1": "Transformed Card id",
+      "eff_value2": "battle_params Set id #1 ",
+      "eff_value3": "battle_params Set id #2",
+      "description": "Invicible full rotation transform. (like Rage) Check details for more info"
+    },
+    {
+      "id": "80",
+      "name": "Change Counter Attack ",
+      "eff_value1": "Damage Reduction (%)",
+      "eff_value2": " Counter Multiplier",
+      "eff_value3": "Lua Script #",
+      "description": "From folder [lua] > [ab_script] > [attack_counter] > cXXXX.lua"
+    },
+    {
+      "id": "81",
+      "name": "Change Extra Attack ",
+      "eff_value2": " Probability 2nd extra Attack",
+      "eff_value3": " Probability Super Attack",
+      "description": "Use probability for chance(2nd extra attack can only happen if the first did)"
+    },
+    {
+      "id": "82",
+      "name": "Change Element Type HP ATK DEF",
+      "eff_value1": "Element Bitpattern",
+      "eff_value2": "HP, ATK & DEF Value"
+    },
+    {
+      "id": "83",
+      "name": "Change Element Type Energy Bitpattern ",
+      "eff_value1": "Element Bitpattern",
+      "eff_value2": "Ki Value"
+    },
+    {
+      "id": "84",
+      "name": "Change Suicide Attack (Sacrificing HP)",
+      "eff_value1": "HP Value"
+    },
+    {
+      "id": "85",
+      "name": "Change Step Extra Attack"
+    },
+    {
+      "id": "86",
+      "name": "Change Special ATK Rate "
+    },
+    {
+      "id": "87",
+      "name": "Change Element Type Attack Coef "
+    },
+    {
+      "id": "88",
+      "name": "Change Element Type Defense Coef"
+    },
+    {
+      "id": "89",
+      "name": "Change Element Type Attack Defense Coef "
+    },
+    {
+      "id": "90",
+      "name": "Change Critical Attack",
+      "eff_value1": "Probability"
+    },
+    {
+      "id": "91",
+      "name": "Change Dodge",
+      "eff_value1": "Probability"
+    },
+    {
+      "id": "92",
+      "name": "Change Always Hit "
+    },
+    {
+      "id": "93",
+      "name": "Change Element Type Bitpattern HP ",
+      "eff_value1": "Element Bitpattern",
+      "eff_value2": "HP Value",
+      "description": "Only works for Leaderskills"
+    },
+    {
+      "id": "94",
+      "name": "Change Invalidate Stun"
+    },
+    {
+      "id": "95",
+      "name": "Change Dodge Counter Attack ",
+      "eff_value1": "param_no in [battle_params] (prob)",
+      "eff_value2": " Counter Multiplier",
+      "eff_value3": " Lua Script #",
+      "description": "From folder [lua] > [ab_script] > [attack_counter] > cXXXX.lua"
+    },
+    {
+      "id": "96",
+      "name": "Change Energy Ball Additional Point ",
+      "eff_value1": "Element Bitpattern",
+      "eff_value2": " Ki Value"
+    },
+    {
+      "id": "97",
+      "name": "Change Absorb Special (SA Nullification)",
+      "eff_value1": "Heal Value (optional)",
+      "eff_value2": "Super Attack Type",
+      "description": "From folder [lua] > [ab_script] > [ab_sys] > cXXXX.lua"
+    },
+    {
+      "id": "98",
+      "name": "Change Incremental Param",
+      "eff_value1": "Increase Value",
+      "eff_value2": " Maximum Value",
+      "eff_value3": "See details",
+      "description": " 0 = ATK, 1 = DEF, 2 = Crit, 3 = Dodge, 4 = Damage reduction, 5 = Ki"
+    },
+    {
+      "id": "99",
+      "name": "Change Invalidate Status Down "
+    },
+    {
+      "id": "100",
+      "name": "Change Invalidate Astute"
+    },
+    {
+      "id": "101",
+      "name": "Change Prediction ",
+      "description": "Use probability for chance, Always use target all allies "
+    },
+    {
+      "id": "102",
+      "name": "Change Metamorphic Probability Count Limit",
+      "eff_value2": "Additional chance",
+      "description": "Only works for Leaderskills"
+    },
+    {
+      "id": "103",
+      "name": "Transformation",
+      "eff_value1": "Transformed Card id",
+      "eff_value2": " Turn Requirement",
+      "eff_value3": "param_no in [battle_params]",
+      "description": "Check details for more info"
+    },
+    {
+      "id": "104",
+      "name": "Change HP ATK DEF ",
+      "eff_value1": "HP Value ",
+      "eff_value2": " ATK Value ",
+      "eff_value3": " DEF Value ",
+      "description": "Only works for Leaderskills"
+    },
+    {
+      "id": "109",
+      "name": "Revival Skill ",
+      "eff_value1": "Heal Value",
+      "eff_value2": " effect_pack id",
+      "eff_value3": " BGM id "
+    },
+    {
+      "id": "110",
+      "name": "Passive Reset / Number of uses cap (?)",
+      "eff_value1": "2 (not much info, existing use 2)",
+      "eff_value2": "passive _skills id",
+      "description": "Not much info, only LR TEQ Gogeta SA nullifying and STR Gohan's counter uses it"
+    },
+    {
+      "id": "111",
+      "name": "Nullify action",
+      "description": "Use probability for chance, Always use target enemy or all enemies "
+    }
+  ],
+  "Casualties": [
+    {
+      "name": "IsNoneRule",
+      "id": 0
+    },
+    {
+      "name": "IsOverHpRate",
+      "id": 1,
+      "description": "HP is above percent",
+      "cau_value1": "Percentage"
+    },
+    {
+      "name": "IsUnderHpRate",
+      "id": 2,
+      "description": "HP is below percent",
+      "cau_value1": "Percentage"
+    },
+    {
+      "name": "IsOverEnergyRate",
+      "id": 3,
+      "description": "Ki is above a number",
+      "cau_value1": "Ki amount"
+    },
+    {
+      "name": "isUnderEnergy",
+      "id": 4,
+      "description": "Ki is below a number",
+      "cau_value1": "Ki amount"
+    },
+    {
+      "name": "isElapsedTurn",
+      "id": 5,
+      "description": "Battle has past turn number",
+      "cau_value1": "Turn"
+    },
+    {
+      "name": "isPartyRaceType",
+      "id": 6,
+      "description": "Checks if entire deck has a certain link skill",
+      "cau_value1": "Link Skill id"
+    },
+    {
+      "name": "isEnemyRaceType",
+      "id": 7,
+      "description": "Checks if enemy has a certain link skill",
+      "cau_value1": "Link Skill id"
+    },
+    {
+      "name": "isOverFightingPower",
+      "id": 8,
+      "description": "Checks current attack and defense is over a number",
+      "cau_value1": "Attack",
+      "cau_value2": "Defense"
+    },
+    {
+      "name": "isUnderFightingPower",
+      "id": 9,
+      "description": "Checks current attack and defense is under a number",
+      "cau_value1": "Attack",
+      "cau_value2": "Defense"
+    },
+    {
+      "name": "isOverHpRateOverEnergy",
+      "id": 10,
+      "description": "HP is above percent, Ki is above number",
+      "cau_value1": "HP Percent",
+      "cau_value2": "Ki Amount"
+    },
+    {
+      "name": "isOverHpRateUnderEnergy",
+      "id": 11,
+      "description": "HP is above percent, Ki is below number",
+      "cau_value1": "HP Percent",
+      "cau_value2": "Ki Amount"
+    },
+    {
+      "name": "isUnderHpRateOverEnergy",
+      "id": 12,
+      "description": "HP is below percent, Ki is above number",
+      "cau_value1": "HP Percent",
+      "cau_value2": "Ki Amount"
+    },
+    {
+      "name": "isUnderHpRateUnderEnergy",
+      "id": 13,
+      "description": "HP is under percent, Ki is below number",
+      "cau_value1": "HP Percent",
+      "cau_value2": "Ki Amount"
+    },
+    {
+      "name": "isFirstAttack",
+      "id": 14,
+      "description": "Card is in first slot"
+    },
+    {
+      "name": "isOverTargetNum",
+      "id": 15,
+      "description": "More than a number of enemies",
+      "cau_value1": "Number of Enemies"
+    },
+    {
+      "name": "isUnderTargetNum",
+      "id": 16,
+      "description": "Less than a number of enemies",
+      "cau_value1": "Number of Enemies"
+    },
+    {
+      "name": "isOverTargetHpRate",
+      "id": 17,
+      "description": "Enemy target HP above a percent",
+      "cau_value1": "HP Percent"
+    },
+    {
+      "name": "isUnderTargetHpRate",
+      "id": 18,
+      "description": "Enemy target HP below a percent",
+      "cau_value1": "HP Percent"
+    },
+    {
+      "name": "isAttackOrder",
+      "id": 19,
+      "description": "Checks card slot position",
+      "cau_value1": "Slot (0, 1, 2)"
+    },
+    {
+      "name": "isOverEnergyCondition",
+      "id": 20,
+      "description": "Ki is above percent",
+      "cau_value1": "Ki Percent"
+    },
+    {
+      "name": "isUnderEnergyCondition",
+      "id": 21,
+      "description": "Ki is below percent",
+      "cau_value1": "Ki Percent"
+    },
+    {
+      "name": "isPartyExistChara",
+      "id": 22,
+      "description": "Check if character is present in deck",
+      "cau_value1": "Card Unique Info id"
+    },
+    {
+      "name": "isLinkNum",
+      "id": 23,
+      "description": "Check if at number of links or greater are active",
+      "cau_value1": "Number of links"
+    },
+    {
+      "name": "isHitDamaged",
+      "id": 24,
+      "description": "Activates upon being attacked"
+    },
+    {
+      "name": "isTargetKill",
+      "id": 25,
+      "description": "Activates when target is killed"
+    },
+    {
+      "name": "isOverHpRateEnableSpecial",
+      "id": 26,
+      "description": "HP is above percent, card has enough ki to super",
+      "cau_value1": "HP Percent"
+    },
+    {
+      "name": "isUnderHpRateEnableSpecial",
+      "id": 27,
+      "description": "HP is below percent, card has enough ki to super",
+      "cau_value1": "HP Percent"
+    },
+    {
+      "name": "isSlotElementType",
+      "id": 28,
+      "description": "Checks if any cards on rotation are a certain element",
+      "cau_value1": "Element Type"
+    },
+    {
+      "name": "isEnemyExistChara",
+      "id": 29,
+      "description": "Check if character is an enemy",
+      "cau_value1": "Card Unique Info id"
+    },
+    {
+      "name": "isGuardSuccess",
+      "id": 30,
+      "description": "Check if card is guarding"
+    },
+    {
+      "name": "isCombinationAttack",
+      "id": 31,
+      "description": "Activates if there are three enemy attacks"
+    },
+    {
+      "name": "isChangeEnergyBallColor",
+      "id": 32,
+      "description": "Checks if there is a ki of a certain type on the board",
+      "cau_value1": "Ki Type"
+    },
+    {
+      "name": "isBetweenHpRate",
+      "id": 33,
+      "description": "Checks if card HP percent is between two numbers",
+      "cau_value1": "HP Percent Lower",
+      "cau_value2": "HP Percent Higher"
+    },
+    {
+      "name": "isOverTeamCategoryNum",
+      "id": 34,
+      "description": "Check if category card is present",
+      "cau_value1": "0 for deck; 1 for enemy",
+      "cau_value2": "Category id",
+      "cau_value3": "Unknown"
+    },
+    {
+      "name": "hasAllElementBitpatternCards",
+      "id": 35,
+      "description": "Checks if deck has all types of an element bitset",
+      "cau_value1": "Element Bitset"
+    },
+    {
+      "name": "isOverHpRateAndElapsedTurn",
+      "id": 36,
+      "description": "HP is above percent, battle has past turn number",
+      "cau_value1": "HP Percent",
+      "cau_value2": "Turn"
+    },
+    {
+      "name": "isUnderHpRateAndElapsedTurn",
+      "id": 37,
+      "description": "HP is below percent, battle has past turn number",
+      "cau_value1": "HP Percent",
+      "cau_value2": "Turn"
+    },
+    {
+      "name": "isTargetEnemyCondition",
+      "id": 38,
+      "description": "Enemy has required status effects",
+      "cau_value1": "Status Effect Flags",
+      "cau_value2": "Unknown"
+    },
+    {
+      "name": "isTargetElementTypeBitPattern",
+      "id": 39,
+      "description": "Check if enemy element matches element bitset",
+      "cau_value1": "Element Bitset"
+    },
+    {
+      "name": "isSpecialAttack",
+      "id": 40,
+      "description": "Activates if card has used a special attack"
+    },
+    {
+      "name": "isOverTeamUniqueCardNum",
+      "id": 41,
+      "description": "Activates if deck has card with name",
+      "cau_value1": "Unknown",
+      "cau_value2": "Card Unique Info id",
+      "cau_value3": "Unknown"
+    },
+    {
+      "name": "isEnergyBallGetNum",
+      "id": 42,
+      "description": "Activates if card gets more then specified Ki amount",
+      "cau_value1": "Unknown",
+      "cau_value2": "Ki Amount"
+    },
+    {
+      "name": "isDodgeSuccess",
+      "id": 43,
+      "description": "Activates if card has evaded an attack",
+      "cau_value1": "Unknown",
+      "cau_value2": "Unknown",
+      "cau_value3": "Unknown"
+    },
+    {
+      "name": "isCountUp",
+      "id": 44,
+      "description": "Unknown",
+      "cau_value1": "Unknown",
+      "cau_value2": "Unknown",
+      "cau_value3": "Unknown"
+    },
+    {
+      "name": "isContainsCardByCategoryAndUniqueInfo",
+      "id": 45,
+      "description": "Activates if card is in target category and unique info relations",
+      "cau_value1": "Target (team, turn, enemy...)",
+      "cau_value2": "Category (id, not sub target)",
+      "cau_value3": "card_unique_info_set_relations"
+    }
+  ]
+}

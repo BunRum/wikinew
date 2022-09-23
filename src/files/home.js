@@ -6,7 +6,7 @@ import { useLocation } from 'react-router';
 export default function Home(match) {
   const [html, setHTML] = useState("");
   let location = useLocation().pathname;
-  fetch(`${window.location.pathname}/files${location}.html`)
+  fetch(`${window.location.pathname}/files/lmfao.html`)
     .then(data => data.text())
     .then(text => {
       setHTML(text);
@@ -14,7 +14,9 @@ export default function Home(match) {
   return (
     <Grid.Container gap={2} justify="center">
       <Grid xs={8}>
-        <Card variant="bordered">
+        <Card variant="bordered" css={{
+          textAlign: 'center'
+        }}>
           <Card.Body>
             {parse(html)}
           </Card.Body>
