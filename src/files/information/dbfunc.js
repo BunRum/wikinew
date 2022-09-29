@@ -162,7 +162,7 @@ export default function Dbfunc() {
                                             setModalDescription(modaldescriptions[selectedkey])
                                         }
                                     }}
-                                    shadow={false}
+
                                 >
                                     <Table.Header>
                                         <Table.Column>Causalty ID</Table.Column>
@@ -170,7 +170,7 @@ export default function Dbfunc() {
                                         <Table.Column>Description</Table.Column>
                                         <Table.Column align='center'>cau_val1</Table.Column>
                                         <Table.Column align='center'>cau_val2</Table.Column>
-                                        <Table.Column align='left'>cau_val3</Table.Column>
+                                        <Table.Column align='center'>cau_val3</Table.Column>
                                         <Table.Column align='center'>info</Table.Column>
                                     </Table.Header>
                                     <Table.Body css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>
@@ -197,6 +197,8 @@ export default function Dbfunc() {
                                         onPageChange={(page) => console.log({ page })}
                                     />
                                 </Table>
+                                <Spacer y={0.5} />
+                                <Text>asdsd</Text>
                             </Collapse>
                             <Collapse title="Efficacy Types" expanded>
                                 <Table
@@ -209,7 +211,7 @@ export default function Dbfunc() {
                                             setModalDescription(modaldescriptions[selectedkey])
                                         }
                                     }}
-                                    shadow={false}
+
                                 >
                                     <Table.Header>
                                         <Table.Column>Efficacy ID</Table.Column>
@@ -250,16 +252,14 @@ export default function Dbfunc() {
                                 </Table>
                             </Collapse>
                         </Collapse.Group>
+
                         <Text h3 css={{ padding: '0.75rem' }}>Calc Options</Text>
-                        {/* <Spacer x={4}/> */}
                         <Card
                             css={{
                                 maxWidth: '19%',
-                                filter: 'drop-shadow(0 5px 5px rgb(0 0 0 / 0.15));', // shadows.md
+                                // filter: 'drop-shadow(0 5px 5px rgb(0 0 0 / 0.15));', // shadows.md
                             }}
-                            shadow={false}
-                            // variant='shadow'
-                            
+                            variant='flat'
                         >
                             <Card.Body>
                                 <Table
@@ -267,13 +267,12 @@ export default function Dbfunc() {
                                     css={{
                                         alignItems: 'center'
                                     }}
-                                    shadow={false}
                                 >
                                     <Table.Header>
                                         <Table.Column>Calc Option</Table.Column>
                                         <Table.Column css={{ 'textAlign': 'center' }}>Description</Table.Column>
                                     </Table.Header>
-                                    <Table.Body css={{ 'textAlign': 'center' }}> 
+                                    <Table.Body css={{ 'textAlign': 'center' }}>
                                         <Table.Row key='cplus' >
                                             <Table.Cell>0</Table.Cell>
                                             <Table.Cell>Calc Plus</Table.Cell>
@@ -298,6 +297,200 @@ export default function Dbfunc() {
                                 </Table>
                             </Card.Body>
                         </Card>
+
+                        <Spacer y={1} />
+                        <Text h3 css={{ padding: '0.75rem' }}>Target Types</Text>
+                        <Card
+                            css={{
+                                maxWidth: '30%',
+                            }}
+
+                            variant='flat'
+                        >
+                            <Card.Body>
+                                <Table
+                                    aria-label="Target Types"
+                                    css={{
+                                        alignItems: 'center'
+                                    }}
+                                >
+                                    <Table.Header >
+                                        <Table.Column>Target Type</Table.Column>
+                                        <Table.Column >Description</Table.Column>
+                                    </Table.Header>
+                                    <Table.Body>
+                                        {
+                                            Object.values(datajson["Target Types"]).map((key, index) => (
+                                                <Table.Row key={`TargetType:${key["Description"]}`}>
+                                                    <Table.Cell>{key["Target Type"]}</Table.Cell>
+                                                    <Table.Cell>{key["Description"]}</Table.Cell>
+                                                </Table.Row>
+                                            ))
+                                        }
+                                    </Table.Body>
+                                </Table>
+                            </Card.Body>
+                        </Card>
+
+                        <Spacer y={1} />
+                        <Text h3 css={{ padding: '0.75rem' }}>Influence Types</Text>
+                        <Card
+                            css={{
+                                maxWidth: '20%',
+                            }}
+                            variant='flat'>
+                            <Card.Body>
+                                <Table
+                                    aria-label="Influence Types"
+                                    css={{
+                                        alignItems: 'center'
+                                    }}
+                                >
+                                    <Table.Header >
+                                        <Table.Column>Influence Type</Table.Column>
+                                        <Table.Column >Description</Table.Column>
+                                    </Table.Header>
+                                    <Table.Body>
+                                        {
+                                            Object.values(datajson["Influence Types"]).map((key, index) => (
+                                                <Table.Row key={`InfluenceType:${key["Description"]}`}>
+                                                    <Table.Cell>{key["Influence Type"]}</Table.Cell>
+                                                    <Table.Cell>{key["Description"]}</Table.Cell>
+                                                </Table.Row>
+                                            ))
+                                        }
+                                    </Table.Body>
+                                </Table>
+                            </Card.Body>
+                        </Card>
+
+                        <Spacer y={1} />
+                        <Text h3 css={{ padding: '0.75rem' }}>Exec Timing</Text>
+                        <Card
+                            css={{
+                                maxWidth: '25%',
+                            }}
+                            variant='flat'>
+                            <Card.Body>
+                                <Table
+                                    aria-label="Exec Timing"
+                                    css={{
+                                        alignItems: 'center'
+                                    }}>
+                                    <Table.Header>
+                                        <Table.Column>Exec Timing</Table.Column>
+                                        <Table.Column>Description</Table.Column>
+                                    </Table.Header>
+                                    <Table.Body>
+                                        {
+                                            Object.values(datajson["Exec Timing"]).map((key, index) => (
+                                                <Table.Row key={`ExecTiming:${key.Description}`}>
+                                                    <Table.Cell>{key["Exec Timing"]}</Table.Cell>
+                                                    <Table.Cell>{key.Description}</Table.Cell>
+                                                </Table.Row>
+                                            ))
+                                        }
+                                    </Table.Body>
+                                </Table>
+                            </Card.Body>
+                        </Card>
+
+                        <Spacer y={1} />
+                        <Text h3 css={{ padding: '0.75rem' }}>Type Bitsets</Text>
+                        <Card
+                            css={{
+                                maxWidth: '20%',
+                            }}
+                            variant='flat'>
+                            <Card.Body>
+                                <Table
+                                    aria-label="Type Bitsets"
+                                    css={{
+                                        alignItems: 'center'
+                                    }}>
+                                    <Table.Header>
+                                        <Table.Column>Type</Table.Column>
+                                        <Table.Column>Value</Table.Column>
+                                    </Table.Header>
+                                    <Table.Body>
+                                        {
+                                            Object.values(datajson["Type Bitsets"]).map((key, index) => (
+                                                <Table.Row key={`TypeBitsets:${key.Type}, ${key.Value}`}>
+                                                    <Table.Cell>{key.Type}</Table.Cell>
+                                                    <Table.Cell>{key.Value}</Table.Cell>
+                                                </Table.Row>
+                                            ))
+                                        }
+                                    </Table.Body>
+                                </Table>
+                            </Card.Body>
+                        </Card>
+
+                        <Spacer y={1} />
+                        <Text h3 css={{ padding: '0.75rem' }}>Effect Pack Category</Text>
+                        <Card
+                            css={{
+                                maxWidth: '30%',
+                            }}
+                            variant='flat'>
+                            <Card.Body>
+                                <Table
+                                    aria-label="Effect Pack Category"
+                                    css={{
+                                        alignItems: 'center'
+                                    }}>
+                                    <Table.Header>
+                                        <Table.Column>Effect Pack Category</Table.Column>
+                                        <Table.Column>Animation Path</Table.Column>
+                                    </Table.Header>
+                                    <Table.Body>
+                                        {
+                                            Object.values(datajson["Effect Pack Category"]).map((key, index) => (
+                                                <Table.Row key={`EPC:${key["Animation Path"]}`}>
+                                                    <Table.Cell>{key["Effect Pack Category"]}</Table.Cell>
+                                                    <Table.Cell>{key["Animation Path"]}</Table.Cell>
+                                                </Table.Row>
+                                            ))
+                                        }
+                                    </Table.Body>
+                                </Table>
+                            </Card.Body>
+                        </Card>
+
+                        
+                        <Spacer y={1} />
+                        <Text h3 css={{ padding: '0.75rem' }}>Link Check Types</Text>
+                        <Card
+                            css={{
+                                maxWidth: '30%',
+                            }}
+                            variant='flat'>
+                            <Card.Body>
+                                <Table
+                                    aria-label="Link Check Types"
+                                    css={{
+                                        alignItems: 'center'
+                                    }}>
+                                    <Table.Header>
+                                        <Table.Column>ID</Table.Column>
+                                        <Table.Column>Name</Table.Column>
+                                        <Table.Column>Description</Table.Column>
+                                    </Table.Header>
+                                    <Table.Body>
+                                        {
+                                            Object.values(datajson["Link Check Types"]).map((key, index) => (
+                                                <Table.Row key={`LCT:${key["Name"]}`}>
+                                                    <Table.Cell>{key.id}</Table.Cell>
+                                                    <Table.Cell>{key.Name}</Table.Cell>
+                                                    <Table.Cell>{key.Description}</Table.Cell>
+                                                </Table.Row>
+                                            ))
+                                        }
+                                    </Table.Body>
+                                </Table>
+                            </Card.Body>
+                        </Card>
+
                     </Card.Body>
                 </Card>
             </Grid>
@@ -307,7 +500,6 @@ export default function Dbfunc() {
                 onClose={closeHandler}
                 width='40%'
                 scroll
-
                 noPadding
             >
                 <Modal.Header>
@@ -318,7 +510,7 @@ export default function Dbfunc() {
                 <Modal.Body style={{
                     'display': 'flex',
                     'alignItems': 'center'
-                }} >
+                }}>
                     {GetModalDescription}
                 </Modal.Body>
             </Modal>

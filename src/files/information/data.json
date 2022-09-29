@@ -783,5 +783,303 @@
       "name": "isExecutedRevivalSkill",
       "id": 46
     }
+  ],
+  "Target Types": [
+    {
+      "Target Type": "0",
+      "Description": "None"
+    },
+    {
+      "Target Type": "1",
+      "Description": "Self"
+    },
+    {
+      "Target Type": "2",
+      "Description": "Party All"
+    },
+    {
+      "Target Type": "3",
+      "Description": "Enemy"
+    },
+    {
+      "Target Type": "4",
+      "Description": "Enemy All"
+    },
+    {
+      "Target Type": "5",
+      "Description": "Self And Target"
+    },
+    {
+      "Target Type": "6",
+      "Description": "Party Race Type"
+    },
+    {
+      "Target Type": "7",
+      "Description": "Party Exist Chara"
+    },
+    {
+      "Target Type": "8",
+      "Description": "Target Excepct"
+    },
+    {
+      "Target Type": "9",
+      "Description": "Target Party Enemy Attack Order"
+    },
+    {
+      "Target Type": "10",
+      "Description": "Slot Attacker"
+    },
+    {
+      "Target Type": "11",
+      "Description": "Party Slot Random"
+    },
+    {
+      "Target Type": "12",
+      "Description": "Party Super Class"
+    },
+    {
+      "Target Type": "13",
+      "Description": "Party Extreme Class"
+    },
+    {
+      "Target Type": "14",
+      "Description": "Enemy Super Class"
+    },
+    {
+      "Target Type": "15",
+      "Description": "Enemy Extreme Class"
+    }
+  ],
+  "Influence Types": [
+    {
+      "Influence Type": "0",
+      "Description": "None"
+    },
+    {
+      "Influence Type": "1",
+      "Description": "Both Ends"
+    },
+    {
+      "Influence Type": "2",
+      "Description": "Left"
+    },
+    {
+      "Influence Type": "3",
+      "Description": "Right"
+    },
+    {
+      "Influence Type": "4",
+      "Description": "Jump Left"
+    },
+    {
+      "Influence Type": "5",
+      "Description": "Jump Right"
+    }
+  ],
+  "Exec Timing": [
+    {
+      "Exec Timing": "1",
+      "Description": "Start Round"
+    },
+    {
+      "Exec Timing": "2",
+      "Description": "Link Skills"
+    },
+    {
+      "Exec Timing": "3",
+      "Description": "Your Turn"
+    },
+    {
+      "Exec Timing": "4",
+      "Description": "On Player Attack"
+    },
+    {
+      "Exec Timing": "5",
+      "Description": "Enemy Turn"
+    },
+    {
+      "Exec Timing": "6",
+      "Description": "Before Player Hit"
+    },
+    {
+      "Exec Timing": "7",
+      "Description": "After Player Hit"
+    },
+    {
+      "Exec Timing": "8",
+      "Description": "Battle Result Phase"
+    },
+    {
+      "Exec Timing": "9",
+      "Description": "End Round"
+    },
+    {
+      "Exec Timing": "10",
+      "Description": "Unknown"
+    },
+    {
+      "Exec Timing": "11",
+      "Description": "End of Puzzle Phase"
+    }
+  ],
+  "Type Bitsets": [
+    {
+      "Type": "AGL",
+      "Value": "1"
+    },
+    {
+      "Type": "TEQ",
+      "Value": "2"
+    },
+    {
+      "Type": "INT",
+      "Value": "4"
+    },
+    {
+      "Type": "STR",
+      "Value": "8"
+    },
+    {
+      "Type": "PHY",
+      "Value": "16"
+    },
+    {
+      "Type": "Super",
+      "Value": "32"
+    },
+    {
+      "Type": "Extreme",
+      "Value": "64"
+    },
+    {
+      "Type": "Unknown",
+      "Value": "128"
+    },
+    {
+      "Type": "Unknown",
+      "Value": "256"
+    },
+    {
+      "Type": "Unknown",
+      "Value": "512"
+    },
+    {
+      "Type": "Unknown",
+      "Value": "1024"
+    },
+    {
+      "Type": "Unknown",
+      "Value": "2048"
+    },
+    {
+      "Type": "Super AGL",
+      "Value": "4096"
+    },
+    {
+      "Type": "Super TEQ",
+      "Value": "8192"
+    },
+    {
+      "Type": "Super INT",
+      "Value": "16384"
+    },
+    {
+      "Type": "Super STR",
+      "Value": "32768"
+    },
+    {
+      "Type": "Super PHY",
+      "Value": "65536"
+    },
+    {
+      "Type": "Extreme AGL",
+      "Value": "131072"
+    },
+    {
+      "Type": "Extreme TEQ",
+      "Value": "262144"
+    },
+    {
+      "Type": "Extreme INT",
+      "Value": "524288"
+    },
+    {
+      "Type": "Extreme STR",
+      "Value": "1048576"
+    },
+    {
+      "Type": "Extreme PHY",
+      "Value": "2097512"
+    },
+    {
+      "Type": "Unknown",
+      "Value": "4194304"
+    },
+    {
+      "Type": "Unknown",
+      "Value": "8388608"
+    },
+    {
+      "Type": "Unknown",
+      "Value": "16777216"
+    }
+  ],
+  "Effect Pack Category": [
+    {
+      "Effect Pack Category": "0",
+      "Animation Path": "comic_text/ja/%s/%s.lwf"
+    },
+    {
+      "Effect Pack Category": "1",
+      "Animation Path": "ingame/battle/effect/%s/%s.lwf"
+    },
+    {
+      "Effect Pack Category": "2",
+      "Animation Path": "ingame/sugoroku/effect/%s/%s.lwf"
+    },
+    {
+      "Effect Pack Category": "3",
+      "Animation Path": "outgame/effect/%s/%s.lwf"
+    },
+    {
+      "Effect Pack Category": "4",
+      "Animation Path": "ingame/battle/sp_effect/%s/%s/%s.lwf"
+    },
+    {
+      "Effect Pack Category": "5",
+      "Animation Path": "ingame/battle/sp_effect/%s/%s.lwf"
+    }
+  ],
+  "Link Check Types": [
+    {
+      "id": "0",
+      "Name": "isLinkCheckType",
+      "Description": "Unknown"
+    },
+    {
+      "id": "1",
+      "Name": "isLinkCheckSlotChara",
+      "Description": "Unknown"
+    },
+    {
+      "id": "2",
+      "Name": "isLinkCheckUnderHprate",
+      "Description": "Unknown"
+    },
+    {
+      "id": "3",
+      "Name": "isLinkCheckExistChara",
+      "Description": "Unknown"
+    },
+    {
+      "id": "4",
+      "Name": "isLinkCheckPercentage",
+      "Description": "Unknown"
+    },
+    {
+      "id": "5",
+      "Name": "isLinkCheckSpecialConsecutive",
+      "Description": "Unknown"
+    }
   ]
 }
