@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/wikinew/static/css/main.011f779f.css",
-    "main.js": "/wikinew/static/js/main.38b67ec8.js",
+    "main.js": "/wikinew/static/js/main.27078a55.js",
     "static/js/787.b27e82c7.chunk.js": "/wikinew/static/js/787.b27e82c7.chunk.js",
     "static/media/template.sql": "/wikinew/static/media/template.99e249bf7d6489af3160.sql",
     "index.html": "/wikinew/index.html",
     "static/media/pboard.sql": "/wikinew/static/media/pboard.ba355227b04a36d05960.sql",
     "main.011f779f.css.map": "/wikinew/static/css/main.011f779f.css.map",
-    "main.38b67ec8.js.map": "/wikinew/static/js/main.38b67ec8.js.map",
+    "main.27078a55.js.map": "/wikinew/static/js/main.27078a55.js.map",
     "787.b27e82c7.chunk.js.map": "/wikinew/static/js/787.b27e82c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.011f779f.css",
-    "static/js/main.38b67ec8.js"
+    "static/js/main.27078a55.js"
   ]
 }
