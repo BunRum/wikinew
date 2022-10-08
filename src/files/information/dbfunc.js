@@ -18,10 +18,9 @@ const modaldescriptions =
     ),
     "isTargetEnemyCondition": (
         <Table css={{
-            height: "auto",
-            minWidth: "100%",
+            minHeight: "10%",
+            // minWidth: "100%",
         }}
-            selectionMode='single'
         >
             <Table.Header>
                 <Table.Column align="center">Status Mask</Table.Column>
@@ -165,22 +164,22 @@ export default function Dbfunc() {
 
                                 >
                                     <Table.Header>
-                                        <Table.Column>Causalty ID</Table.Column>
-                                        <Table.Column>Name</Table.Column>
-                                        <Table.Column>Description</Table.Column>
-                                        <Table.Column align='center'>cau_val1</Table.Column>
-                                        <Table.Column align='center'>cau_val2</Table.Column>
-                                        <Table.Column align='center'>cau_val3</Table.Column>
-                                        <Table.Column align='center'>info</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>Causalty ID</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'left' }}>Name</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'left' }}>Description</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>cau_val1</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>cau_val2</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>cau_val3</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>info</Table.Column>
                                     </Table.Header>
                                     <Table.Body css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>
                                         {
                                             Object.values(datajson.Casualties).map((key, index) => (
                                                 // console.log(key, index),
                                                 <Table.Row key={key.name}>
-                                                    <Table.Cell >{key.id}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.name}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.description ? key.description : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center' }}>{key.id}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'left' }}>{key.name}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'left' }}>{key.description ? key.description : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
                                                     <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.cau_value1 ? <Text b><code className='IS'>{key.cau_value1}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
                                                     <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.cau_value2 ? <Text b size={1}><code className='IS'>{key.cau_value2}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
                                                     <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.cau_value3 ? <Text b size={1}><code className='IS'>{key.cau_value3}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
@@ -197,8 +196,6 @@ export default function Dbfunc() {
                                         onPageChange={(page) => console.log({ page })}
                                     />
                                 </Table>
-                                <Spacer y={0.5} />
-                                <Text>asdsd</Text>
                             </Collapse>
                             <Collapse title="Efficacy Types" expanded>
                                 <Table
@@ -214,28 +211,27 @@ export default function Dbfunc() {
 
                                 >
                                     <Table.Header>
-                                        <Table.Column>Efficacy ID</Table.Column>
-                                        <Table.Column>Name</Table.Column>
-                                        <Table.Column>Description</Table.Column>
-                                        <Table.Column align='center'>eff_val1</Table.Column>
-                                        <Table.Column align='center'>eff_val2</Table.Column>
-                                        <Table.Column>eff_val3</Table.Column>
-                                        <Table.Column align='center'>info</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>Efficacy ID</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'left' }}>Name</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'left' }}>Description</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>eff_val1</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>eff_val2</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>eff_val3</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center' }}>info</Table.Column>
                                     </Table.Header>
-                                    <Table.Body items={datajson.efficacies}>
+                                    <Table.Body>
 
                                         {
                                             Object.values(datajson.efficacies).map((key, index) => (
                                                 // console.log(key, index),
                                                 <Table.Row>
-                                                    <Table.Cell >{key.id}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center' }}>{key.id}</Table.Cell>
                                                     <Table.Cell css={{ 'textAlign': 'left' }}>{key.name}</Table.Cell>
-                                                    <Table.Cell>{key.description ? key.description : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'center' }}>{key.eff_value1 ? <Text b><code className='IS'>{key.eff_value1}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'center' }}>{key.eff_value2 ? <Text b size={1}><code className='IS'>{key.eff_value2}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
-                                                    <Table.Cell css={{ 'textAlign': 'left' }}>{key.eff_value3 ? <Text b size={1}><code className='IS'>{key.eff_value3}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
-
-                                                    <Table.Cell align="center">{modaldescriptions[key.name] ? <Text b><code>More Info</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'left' }}>{key.description ? key.description : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.eff_value1 ? <Text b><code className='IS'>{key.eff_value1}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.eff_value2 ? <Text b size={1}><code className='IS'>{key.eff_value2}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key.eff_value3 ? <Text b size={1}><code className='IS'>{key.eff_value3}</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{modaldescriptions[key.name] ? <Text b><code>More Info</code></Text> : <Text b><Code className='Null'>None</Code></Text>}</Table.Cell>
 
                                                 </Table.Row>
                                             ))
@@ -457,7 +453,7 @@ export default function Dbfunc() {
                             </Card.Body>
                         </Card>
 
-                        
+
                         <Spacer y={1} />
                         <Text h3 css={{ padding: '0.75rem' }}>Link Check Types</Text>
                         <Card
@@ -500,7 +496,9 @@ export default function Dbfunc() {
                 onClose={closeHandler}
                 width='40%'
                 scroll
-                noPadding
+                aria-labelledby="modal-title"
+                aria-describedby="modal-description"
+            // noPadding
             >
                 <Modal.Header>
                     <Text id="modal-title" size={18} weight='bold'>

@@ -1,0 +1,812 @@
+[
+    {
+        "potential_board_id": "10",
+        "comment": "B-rank AGL.",
+        "type": "PotentialEvent::Atk",
+        "total": "3000"
+    },
+    {
+        "potential_board_id": "10",
+        "comment": "B-rank AGL.",
+        "type": "PotentialEvent::Defense",
+        "total": "3240"
+    },
+    {
+        "potential_board_id": "10",
+        "comment": "B-rank AGL.",
+        "type": "PotentialEvent::Hp",
+        "total": "2760"
+    },
+    {
+        "potential_board_id": "11",
+        "comment": "B-rank TEQ.",
+        "type": "PotentialEvent::Atk",
+        "total": "3240"
+    },
+    {
+        "potential_board_id": "11",
+        "comment": "B-rank TEQ.",
+        "type": "PotentialEvent::Defense",
+        "total": "3000"
+    },
+    {
+        "potential_board_id": "11",
+        "comment": "B-rank TEQ.",
+        "type": "PotentialEvent::Hp",
+        "total": "2760"
+    },
+    {
+        "potential_board_id": "12",
+        "comment": "B-rank INT.",
+        "type": "PotentialEvent::Atk",
+        "total": "3000"
+    },
+    {
+        "potential_board_id": "12",
+        "comment": "B-rank INT.",
+        "type": "PotentialEvent::Defense",
+        "total": "3000"
+    },
+    {
+        "potential_board_id": "12",
+        "comment": "B-rank INT.",
+        "type": "PotentialEvent::Hp",
+        "total": "3000"
+    },
+    {
+        "potential_board_id": "13",
+        "comment": "B-rank STR.",
+        "type": "PotentialEvent::Atk",
+        "total": "3240"
+    },
+    {
+        "potential_board_id": "13",
+        "comment": "B-rank STR.",
+        "type": "PotentialEvent::Defense",
+        "total": "2760"
+    },
+    {
+        "potential_board_id": "13",
+        "comment": "B-rank STR.",
+        "type": "PotentialEvent::Hp",
+        "total": "3000"
+    },
+    {
+        "potential_board_id": "14",
+        "comment": "B-rank PHY.",
+        "type": "PotentialEvent::Atk",
+        "total": "3000"
+    },
+    {
+        "potential_board_id": "14",
+        "comment": "B-rank PHY.",
+        "type": "PotentialEvent::Defense",
+        "total": "2760"
+    },
+    {
+        "potential_board_id": "14",
+        "comment": "B-rank PHY.",
+        "type": "PotentialEvent::Hp",
+        "total": "3240"
+    },
+    {
+        "potential_board_id": "20",
+        "comment": "A-rank AGL.",
+        "type": "PotentialEvent::Atk",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "20",
+        "comment": "A-rank AGL.",
+        "type": "PotentialEvent::Defense",
+        "total": "5400"
+    },
+    {
+        "potential_board_id": "20",
+        "comment": "A-rank AGL.",
+        "type": "PotentialEvent::Hp",
+        "total": "4600"
+    },
+    {
+        "potential_board_id": "21",
+        "comment": "A-rank TEQ.",
+        "type": "PotentialEvent::Atk",
+        "total": "5400"
+    },
+    {
+        "potential_board_id": "21",
+        "comment": "A-rank TEQ.",
+        "type": "PotentialEvent::Defense",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "21",
+        "comment": "A-rank TEQ.",
+        "type": "PotentialEvent::Hp",
+        "total": "4600"
+    },
+    {
+        "potential_board_id": "22",
+        "comment": "A-rank INT. This serves as the base for all others.",
+        "type": "PotentialEvent::Atk",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "22",
+        "comment": "A-rank INT. This serves as the base for all others.",
+        "type": "PotentialEvent::Defense",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "22",
+        "comment": "A-rank INT. This serves as the base for all others.",
+        "type": "PotentialEvent::Hp",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "23",
+        "comment": "A-rank STR.",
+        "type": "PotentialEvent::Atk",
+        "total": "5400"
+    },
+    {
+        "potential_board_id": "23",
+        "comment": "A-rank STR.",
+        "type": "PotentialEvent::Defense",
+        "total": "4600"
+    },
+    {
+        "potential_board_id": "23",
+        "comment": "A-rank STR.",
+        "type": "PotentialEvent::Hp",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "24",
+        "comment": "A-rank PHY.",
+        "type": "PotentialEvent::Atk",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "24",
+        "comment": "A-rank PHY.",
+        "type": "PotentialEvent::Defense",
+        "total": "4600"
+    },
+    {
+        "potential_board_id": "24",
+        "comment": "A-rank PHY.",
+        "type": "PotentialEvent::Hp",
+        "total": "5400"
+    },
+    {
+        "potential_board_id": "30",
+        "comment": "S-rank AGL.",
+        "type": "PotentialEvent::Atk",
+        "total": "7000"
+    },
+    {
+        "potential_board_id": "30",
+        "comment": "S-rank AGL.",
+        "type": "PotentialEvent::Defense",
+        "total": "7560"
+    },
+    {
+        "potential_board_id": "30",
+        "comment": "S-rank AGL.",
+        "type": "PotentialEvent::Hp",
+        "total": "6440"
+    },
+    {
+        "potential_board_id": "31",
+        "comment": "S-rank TEQ.",
+        "type": "PotentialEvent::Atk",
+        "total": "7560"
+    },
+    {
+        "potential_board_id": "31",
+        "comment": "S-rank TEQ.",
+        "type": "PotentialEvent::Defense",
+        "total": "7000"
+    },
+    {
+        "potential_board_id": "31",
+        "comment": "S-rank TEQ.",
+        "type": "PotentialEvent::Hp",
+        "total": "6440"
+    },
+    {
+        "potential_board_id": "32",
+        "comment": "S-rank INT.",
+        "type": "PotentialEvent::Atk",
+        "total": "7000"
+    },
+    {
+        "potential_board_id": "32",
+        "comment": "S-rank INT.",
+        "type": "PotentialEvent::Defense",
+        "total": "7000"
+    },
+    {
+        "potential_board_id": "32",
+        "comment": "S-rank INT.",
+        "type": "PotentialEvent::Hp",
+        "total": "7000"
+    },
+    {
+        "potential_board_id": "33",
+        "comment": "S-rank STR.",
+        "type": "PotentialEvent::Atk",
+        "total": "7560"
+    },
+    {
+        "potential_board_id": "33",
+        "comment": "S-rank STR.",
+        "type": "PotentialEvent::Defense",
+        "total": "6440"
+    },
+    {
+        "potential_board_id": "33",
+        "comment": "S-rank STR.",
+        "type": "PotentialEvent::Hp",
+        "total": "7000"
+    },
+    {
+        "potential_board_id": "34",
+        "comment": "S-rank PHY.",
+        "type": "PotentialEvent::Atk",
+        "total": "7000"
+    },
+    {
+        "potential_board_id": "34",
+        "comment": "S-rank PHY.",
+        "type": "PotentialEvent::Defense",
+        "total": "6440"
+    },
+    {
+        "potential_board_id": "34",
+        "comment": "S-rank PHY.",
+        "type": "PotentialEvent::Hp",
+        "total": "7560"
+    },
+    {
+        "potential_board_id": "120",
+        "comment": "A-rank AGL. For characters with special settings.",
+        "type": "PotentialEvent::Atk",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "120",
+        "comment": "A-rank AGL. For characters with special settings.",
+        "type": "PotentialEvent::Defense",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "120",
+        "comment": "A-rank AGL. For characters with special settings.",
+        "type": "PotentialEvent::Hp",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "121",
+        "comment": "A-rank TEQ. For characters with special settings.",
+        "type": "PotentialEvent::Atk",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "121",
+        "comment": "A-rank TEQ. For characters with special settings.",
+        "type": "PotentialEvent::Defense",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "121",
+        "comment": "A-rank TEQ. For characters with special settings.",
+        "type": "PotentialEvent::Hp",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "122",
+        "comment": "A-rank INT. For characters with special settings.",
+        "type": "PotentialEvent::Atk",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "122",
+        "comment": "A-rank INT. For characters with special settings.",
+        "type": "PotentialEvent::Defense",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "122",
+        "comment": "A-rank INT. For characters with special settings.",
+        "type": "PotentialEvent::Hp",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "123",
+        "comment": "A-rank STR. For characters with special settings.",
+        "type": "PotentialEvent::Atk",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "123",
+        "comment": "A-rank STR. For characters with special settings.",
+        "type": "PotentialEvent::Defense",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "123",
+        "comment": "A-rank STR. For characters with special settings.",
+        "type": "PotentialEvent::Hp",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "124",
+        "comment": "A-rank PHY. For characters with special settings.",
+        "type": "PotentialEvent::Atk",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "124",
+        "comment": "A-rank PHY. For characters with special settings.",
+        "type": "PotentialEvent::Defense",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "124",
+        "comment": "A-rank PHY. For characters with special settings.",
+        "type": "PotentialEvent::Hp",
+        "total": "5000"
+    },
+    {
+        "potential_board_id": "201",
+        "comment": "孫悟空Jr専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "201",
+        "comment": "孫悟空Jr専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "201",
+        "comment": "孫悟空Jr専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "202",
+        "comment": "ブルマ(少女期)専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "202",
+        "comment": "ブルマ(少女期)専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "202",
+        "comment": "ブルマ(少女期)専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "203",
+        "comment": "孫悟飯(幼年期)専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "203",
+        "comment": "孫悟飯(幼年期)専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "203",
+        "comment": "孫悟飯(幼年期)専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "204",
+        "comment": "バータ専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "204",
+        "comment": "バータ専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "204",
+        "comment": "バータ専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "205",
+        "comment": "グルド専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "205",
+        "comment": "グルド専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "205",
+        "comment": "グルド専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "206",
+        "comment": "ギニュー専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "206",
+        "comment": "ギニュー専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "206",
+        "comment": "ギニュー専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "207",
+        "comment": "ジース専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "207",
+        "comment": "ジース専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "207",
+        "comment": "ジース専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "208",
+        "comment": "リクーム専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "208",
+        "comment": "リクーム専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "208",
+        "comment": "リクーム専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "209",
+        "comment": "ピッコロ専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "209",
+        "comment": "ピッコロ専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "209",
+        "comment": "ピッコロ専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "210",
+        "comment": "トランクス(幼年期)&孫悟天(幼年期)&マーロン専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "210",
+        "comment": "トランクス(幼年期)&孫悟天(幼年期)&マーロン専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "210",
+        "comment": "トランクス(幼年期)&孫悟天(幼年期)&マーロン専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "211",
+        "comment": "ギル専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "211",
+        "comment": "ギル専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "211",
+        "comment": "ギル専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "212",
+        "comment": "ベジータJr.専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "212",
+        "comment": "ベジータJr.専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "212",
+        "comment": "ベジータJr.専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "213",
+        "comment": "孫悟空(DOKKAN武闘伝)専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "213",
+        "comment": "孫悟空(DOKKAN武闘伝)専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "213",
+        "comment": "孫悟空(DOKKAN武闘伝)専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "214",
+        "comment": "ベジータ(DOKKAN武闘伝)専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "214",
+        "comment": "ベジータ(DOKKAN武闘伝)専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "214",
+        "comment": "ベジータ(DOKKAN武闘伝)専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "215",
+        "comment": "フリーザ(第二形態)専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "215",
+        "comment": "フリーザ(第二形態)専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "215",
+        "comment": "フリーザ(第二形態)専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "216",
+        "comment": "ベジータ専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "216",
+        "comment": "ベジータ専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "216",
+        "comment": "ベジータ専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "217",
+        "comment": "孫悟空専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "217",
+        "comment": "孫悟空専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "217",
+        "comment": "孫悟空専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "218",
+        "comment": "ブロリー(幼年期)専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "218",
+        "comment": "ブロリー(幼年期)専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "218",
+        "comment": "ブロリー(幼年期)専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "219",
+        "comment": "ベジータ(幼年期)専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "219",
+        "comment": "ベジータ(幼年期)専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "219",
+        "comment": "ベジータ(幼年期)専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "220",
+        "comment": "トテッポ専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "220",
+        "comment": "トテッポ専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "220",
+        "comment": "トテッポ専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "221",
+        "comment": "トーマ専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "221",
+        "comment": "トーマ専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "221",
+        "comment": "トーマ専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "222",
+        "comment": "セリパ専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "222",
+        "comment": "セリパ専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "222",
+        "comment": "セリパ専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "223",
+        "comment": "バーダック専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "223",
+        "comment": "バーダック専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "223",
+        "comment": "バーダック専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "224",
+        "comment": "パンブーキン専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "224",
+        "comment": "パンブーキン専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "224",
+        "comment": "パンブーキン専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "225",
+        "comment": "ブルマ(少女期)専用",
+        "type": "PotentialEvent::Atk",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "225",
+        "comment": "ブルマ(少女期)専用",
+        "type": "PotentialEvent::Defense",
+        "total": "4000"
+    },
+    {
+        "potential_board_id": "225",
+        "comment": "ブルマ(少女期)専用",
+        "type": "PotentialEvent::Hp",
+        "total": "4000"
+    }
+]

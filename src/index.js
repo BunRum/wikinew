@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { createTheme, NextUIProvider } from "@nextui-org/react"
 
 import Navigation from './Navbar';
-import Cardassets from './files/cardassets';
+import Cardassets from './files/cardassets/cardassets';
 import Home from './files/home';
 import Dbfunc from './files/information/dbfunc';
 import Assets from './files/extras/assets';
+import Pboard from './files/information/potentialboard/pboard';
 
 const darkTheme = createTheme({
   type: "dark", // it could be "light" or "dark"
@@ -36,6 +37,7 @@ function Root() {
         </Route>
         <Route path="/information">
           <Route path=":dbfunctions" element={<Dbfunc />} />
+          <Route path=":potential-board" element={<Pboard />} />
         </Route>
         <Route id="home" path="/cards" exact element={<Cardassets />} />
         <Route path="/" element={<Navigate to="/home" />} />
