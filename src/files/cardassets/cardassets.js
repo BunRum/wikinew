@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, Text } from "@nextui-org/react";
+import { Grid, Card, Text, Code } from "@nextui-org/react";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import dark from "react-syntax-highlighter/dist/esm/styles/prism/one-dark";
 // import parse from 'html-react-parser';
@@ -10,12 +10,12 @@ export default function Cardassets() {
     // console.log(templatesql)
     const [Getsql, SetSql] = useState("");
 
-    console.log(fetch(templatesql)
+    fetch(templatesql)
         .then(data => data.text())
         .then(text => {
             // return text
             SetSql(text)
-        }))
+        })
 
     return (
         <Grid.Container gap={2} justify="center">
@@ -40,9 +40,18 @@ export default function Cardassets() {
                             <li>
                                 • <code className='IS'>character_id, integer only</code>
                                 <ul>
-                                    <li>
-                                        • i think this links to the sprite folder
-                                    </li>
+                                    • i think this links to the sprite folder
+                                </ul>
+                            </li>
+                            <li>
+                                • <code className='IS' id="rarity">rarity, integer only</code>
+                                <ul>
+                                    • <Code>0: N</Code> <br />
+                                    • <Code>1: R</Code> <br />
+                                    • <Code>2: SR</Code> <br />
+                                    • <Code>3: SSR</Code> <br />
+                                    • <Code>4: UR</Code> <br />
+                                    • <Code>5: LR</Code> <br />
                                 </ul>
                             </li>
                         </ul>

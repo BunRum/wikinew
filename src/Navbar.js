@@ -7,7 +7,7 @@ import { Input } from "@nextui-org/react";
 const navlinks = [
     {
         title: 'Home',
-        to: 'home'
+        to: '/home'
     },
     {
         title: 'Assets',
@@ -36,7 +36,7 @@ export default function Navigation() {
                     Object.entries(navlinks).map(([sat], i) => (
 
                         <Navbar.Link aria-label="Close" onClick={() => {
-                            navigate(navlinks[sat].to)
+                            navigate(`${navlinks[sat].to}`)
                         }} key={i}>{navlinks[sat].title}</Navbar.Link>
                     ))
                 }

@@ -1,14 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Grid, Card, Table, Text } from "@nextui-org/react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import dark from "react-syntax-highlighter/dist/esm/styles/prism/one-dark";
 import list from './list.json';
+import pboardsql from "./pboard.sql";
 
 export default function Pboard() {
+    const [Getsql, SetSql] = useState("");
+
+    fetch(pboardsql)
+        .then(data => data.text())
+        .then(text => {
+            // return text
+            SetSql(text)
+        })
     return (
         <Grid.Container gap={2} justify="center">
-            <Grid xs={11}>
+            <Grid xs={9}>
                 <Card variant="bordered">
                     <Card.Body>
                         <Text b h2>Potential Board</Text>
+                        <SyntaxHighlighter language="sql" style={dark}>
+                            {Getsql}
+                        </SyntaxHighlighter>
                         <Table
                             aria-label="potentialboards"
                             key="hi"
