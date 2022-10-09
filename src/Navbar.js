@@ -15,7 +15,7 @@ const navlinks = [
     },
     {
         title: 'Information',
-        to: '/information/dbfunctions'
+        to: '/information/database-functions'
     },
     {
         title: 'Cards',
@@ -31,13 +31,14 @@ export default function Navigation() {
     let navigate = useNavigate();
     return (
         <Navbar variant="sticky">
-            <Navbar.Content enableCursorHighlight hideIn="xs">
+            <Navbar.Content hideIn="xs" variant="underline-rounded">
                 {
                     Object.entries(navlinks).map(([sat], i) => (
-
-                        <Navbar.Link aria-label="Close" onClick={() => {
-                            navigate(`${navlinks[sat].to}`)
-                        }} key={i}>{navlinks[sat].title}</Navbar.Link>
+                        <Navbar.Link aria-label="Close" onClick={() => { navigate(`${navlinks[sat].to}`) }} key={i}
+                            isActive={(window.location.pathname.replace('/wikinew', '') === navlinks[sat].to) ? true : false}
+                        >
+                            {navlinks[sat].title}
+                        </Navbar.Link>
                     ))
                 }
             </Navbar.Content>

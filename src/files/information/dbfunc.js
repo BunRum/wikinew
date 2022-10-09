@@ -112,6 +112,13 @@ const modaldescriptions =
                     <Table.Cell>Efficacy Type 101</Table.Cell>
                 </Table.Row>
             </Table.Body>
+            <Table.Pagination
+                // shadow
+                // noMargin
+                align="center"
+                rowsPerPage={6}
+                onPageChange={(page) => console.log({ page })}
+            />
         </Table>
     )
 }
@@ -148,7 +155,7 @@ export default function Dbfunc() {
                                 <Table
                                     aria-label="Casualty Table"
                                     css={{
-                                        minWidth: "100%",
+                                        minWidth: "90%",
                                         height: 'auto',
                                         'textAlign': 'left',
                                         'whiteSpace': 'pre-line'
@@ -161,7 +168,9 @@ export default function Dbfunc() {
                                             setModalDescription(modaldescriptions[selectedkey])
                                         }
                                     }}
-
+                                    sticked
+                                    bordered
+                                    compact
                                 >
                                     <Table.Header>
                                         <Table.Column css={{ 'textAlign': 'center' }}>Causalty ID</Table.Column>
@@ -209,6 +218,9 @@ export default function Dbfunc() {
                                         }
                                     }}
 
+                                    sticked
+                                    bordered
+                                    compact
                                 >
                                     <Table.Header>
                                         <Table.Column css={{ 'textAlign': 'center' }}>Efficacy ID</Table.Column>
@@ -252,7 +264,7 @@ export default function Dbfunc() {
                         <Text h3 css={{ padding: '0.75rem' }}>Calc Options</Text>
                         <Card
                             css={{
-                                maxWidth: '19%',
+                                maxWidth: '25%',
                                 // filter: 'drop-shadow(0 5px 5px rgb(0 0 0 / 0.15));', // shadows.md
                             }}
                             variant='flat'
@@ -395,7 +407,7 @@ export default function Dbfunc() {
                         <Text h3 css={{ padding: '0.75rem' }}>Type Bitsets</Text>
                         <Card
                             css={{
-                                maxWidth: '20%',
+                                maxWidth: '25%',
                             }}
                             variant='flat'>
                             <Card.Body>
@@ -426,7 +438,7 @@ export default function Dbfunc() {
                         <Text h3 css={{ padding: '0.75rem' }}>Effect Pack Category</Text>
                         <Card
                             css={{
-                                maxWidth: '30%',
+                                maxWidth: '35%',
                             }}
                             variant='flat'>
                             <Card.Body>
@@ -458,7 +470,7 @@ export default function Dbfunc() {
                         <Text h3 css={{ padding: '0.75rem' }}>Link Check Types</Text>
                         <Card
                             css={{
-                                maxWidth: '30%',
+                                maxWidth: '35vw',
                             }}
                             variant='flat'>
                             <Card.Body>
@@ -495,7 +507,9 @@ export default function Dbfunc() {
                 open={visible}
                 onClose={closeHandler}
                 width='40%'
+                height='auto'
                 scroll
+                blur
                 aria-labelledby="modal-title"
                 aria-describedby="modal-description"
             // noPadding
