@@ -448,15 +448,15 @@ export default function Dbfunc() {
                                         alignItems: 'center'
                                     }}>
                                     <Table.Header>
-                                        <Table.Column>Effect Pack Category</Table.Column>
-                                        <Table.Column>Animation Path</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>Effect Pack Category</Table.Column>
+                                        <Table.Column css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>Animation Path</Table.Column>
                                     </Table.Header>
                                     <Table.Body>
                                         {
                                             Object.values(datajson["Effect Pack Category"]).map((key, index) => (
                                                 <Table.Row key={`EPC:${key["Animation Path"]}`}>
-                                                    <Table.Cell>{key["Effect Pack Category"]}</Table.Cell>
-                                                    <Table.Cell>{key["Animation Path"]}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key["Effect Pack Category"]}</Table.Cell>
+                                                    <Table.Cell css={{ 'textAlign': 'center', 'white-space': 'pre-line' }}>{key["Animation Path"]}</Table.Cell>
                                                 </Table.Row>
                                             ))
                                         }
@@ -470,7 +470,7 @@ export default function Dbfunc() {
                         <Text h3 css={{ padding: '0.75rem' }}>Link Check Types</Text>
                         <Card
                             css={{
-                                maxWidth: '35vw',
+                                maxWidth: '30%',
                             }}
                             variant='flat'>
                             <Card.Body>

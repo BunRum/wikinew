@@ -18,7 +18,7 @@ export default function Assets() {
             {/* {parse(html)} */}
 
             <Collapse.Group splitted>
-              <Collapse title="Image Resolutions">
+              <Collapse title="Image Resolutions" expanded>
                 <Table
                   aria-label="Example static collection table"
                   css={{
@@ -76,7 +76,7 @@ export default function Assets() {
             <p><sub>By Energizz ?</sub></p>
             <hr />
             <Collapse.Group accordion={false} splitted>
-              <Collapse title="Wallpaper Templates">
+              <Collapse title="Wallpaper Templates" expanded>
                 <p>This <em>ZIP</em> file contains the files necessary for a STATIC image wallpaper, but nothing prevents you from making an animated wallpaper.
                   You will find 1 <em>.lwf</em>, 4 <em>.psd</em> and 1 <em>.json</em> file at the end of the <em>item</em> path.</p>
                 <p><u>How to use and understand each file :</u></p>
