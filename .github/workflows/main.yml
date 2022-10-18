@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+    - main
+    - release/*
+jobs:
+  bash-example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mamama
+        run: |
+            echo "::group::My title"
+            echo "Inside group"
+            echo "::endgroup::"
