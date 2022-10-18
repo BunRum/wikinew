@@ -7,5 +7,6 @@ jobs:
   bash-example:
     runs-on: ubuntu-latest
     steps:
+      - name: hi
         run: |
             echo "stupid ass bitch"
