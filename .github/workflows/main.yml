@@ -7,8 +7,5 @@ jobs:
   bash-example:
     runs-on: ubuntu-latest
     steps:
-      - name: mamama
         run: |
-            echo "::group::My title"
-            echo "Inside group"
-            echo "::endgroup::"
+            echo "stupid ass bitch"
