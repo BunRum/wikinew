@@ -44,6 +44,17 @@ export default function Home(match) {
           </Card.Body>
         </Card>
       </Grid>
+<Grid>
+        <Card variant="bordered">
+          <Card.Body>
+            imeating food day
+            <Image src="https://cdn.discordapp.com/attachments/776894592170983425/1108961690516721815/image.png" showSkeleton css={{
+              // maxWidth: '60%',
+              display: 'block'
+            }} />
+          </Card.Body>
+        </Card>
+      </Grid>
     </Grid.Container>
   )
 }
