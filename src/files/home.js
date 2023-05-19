@@ -47,7 +47,7 @@ export default function Home(match) {
 <Grid>
         <Card variant="bordered">
           <Card.Body>
-            imeating food day
+            imeating goku black day for fortnite!
             <Image src="https://cdn.discordapp.com/attachments/776894592170983425/1108961690516721815/image.png" showSkeleton css={{
               // maxWidth: '60%',
               display: 'block'

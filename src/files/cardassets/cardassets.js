@@ -1,10 +1,10 @@
 import React from 'react';
-import { Grid, Card, Text, Code, Table } from "@nextui-org/react";
+import { Grid, Card, Text, Code } from "@nextui-org/react";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import dark from "react-syntax-highlighter/dist/esm/styles/prism/one-dark";
 // import parse from 'html-react-parser';
 import templatesql from "./template.sql";
-import cardjson from "./card.json";
+// import cardjson from "./card.json";
 import { useState } from "react";
 
 export default function Cardassets() {
